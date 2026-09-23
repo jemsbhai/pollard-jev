@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pollard-jev"
+version = "0.1"
+description = "Typed, governed offline decisions for a robotics supervisor"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{name = "Muntaser Syed"}]
+keywords = ["robotics", "iot", "decisions", "pollard", "governance", "simulation"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Operating System :: OS Independent",
+]
+requires-python = ">=3.11"
+dependencies = ["pollard==1.6.0", "pydantic>=2.13.5,<3"]
+
+[project.optional-dependencies]
+test = ["pytest>=8,<10", "packaging>=24"]
+openjev = ["torch>=2.6", "transformers>=5.15,<6", "numpy>=1.26", "pillow>=10", "huggingface-hub>=0.36"]
+
+[project.scripts]
+pollard-jev = "pollard_jev.demo:main"
+
+[project.urls]
+Homepage = "https://github.com/jemsbhai/pollard-jev"
+Repository = "https://github.com/jemsbhai/pollard-jev"
+Documentation = "https://github.com/jemsbhai/pollard-jev#readme"
+Issues = "https://github.com/jemsbhai/pollard-jev/issues"
+Changelog = "https://github.com/jemsbhai/pollard-jev/blob/main/CHANGELOG.md"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+pollard_jev = ["py.typed"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"

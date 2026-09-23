@@ -1,0 +1,19 @@
+.venv/
+__pycache__/
+.pytest_cache/
+*.egg-info/
+build/
+dist/
+artifacts/
+*.db
+*.db-shm
+*.db-wal
+# Local handoff and verification notes are preserved outside public releases.
+POLLARD_JEV_START.md
+IMPLEMENTATION_PLAN.md
+docs/STATUS.md
+.env
+.env.*
+.pypirc
+*.pem
+*.key

@@ -1,0 +1,14 @@
+include README.md LICENSE CHANGELOG.md AGENTS.md
+include docs/POLLARD_API.md docs/openjev.md docs/IMPLEMENTATION.md docs/RELEASING.md
+recursive-include src/pollard_jev *.py py.typed
+recursive-include tests *.py
+recursive-include examples *.py
+recursive-include scripts *.py
+exclude POLLARD_JEV_START.md IMPLEMENTATION_PLAN.md
+exclude docs/STATUS.md
+prune artifacts
+prune .venv
+prune .git
+prune build
+prune dist
+global-exclude __pycache__ *.py[cod] .env .env.* .pypirc *.pem *.key
