@@ -39,8 +39,8 @@ and dependency licenses remain separate from this companion's code.
 Normal tests inject an encoder with the verified method signature and exercise
 request serialization, label mapping, malformed outputs, and lazy loading.
 They do not load weights or demonstrate model quality. Separately, the pinned
-4B checkpoint ran on Windows/CUDA on 2026-09-27 using the existing Shellhacks
-runtime/cache with no downloads or installs. See [the local benchmark](BENCHMARKING.md)
+4B checkpoint ran on Windows/CUDA on 2026-09-27 using an existing local runtime
+and model cache with no downloads or installs. See [the local benchmark](BENCHMARKING.md)
 for measured latency, GPU allocation, proposal errors, abstention and calibration
 results. Those synthetic cases do not establish physical success or energy savings.
 
@@ -68,9 +68,9 @@ has been promoted to the default.
 ## Reuse an existing local installation
 
 Prefer the [offline benchmark command](BENCHMARKING.md#run-again-without-downloads)
-when the model and optional dependencies already exist in another environment.
-It uses that interpreter and cache directly without changing the other project.
-It never installs dependencies or downloads a missing checkpoint.
+when the model and optional dependencies are already available locally.
+It uses the selected interpreter and cache without modifying the existing
+installation. It never installs dependencies or downloads a missing checkpoint.
 
 ## Optional setup for a new installation
 
@@ -121,7 +121,7 @@ benchmarking before deployment.
 
 The initial milestone audit found no checkpoint in the default Hugging Face
 cache or optional model packages in this project's venv. The 2026-09-27 audit
-located both in Shellhacks and successfully reused them. The benchmark saves
-exact runtime versions and source/model hashes. The factory unit tests remain
-small local doubles; actual CUDA evidence is recorded separately in the
+located an existing local runtime and model cache and successfully reused them.
+The benchmark saves exact runtime versions and source/model hashes. The factory
+unit tests remain small local doubles; actual CUDA evidence is recorded separately in the
 benchmark report. No 0.8B checkpoint was found in the inspected local stores.

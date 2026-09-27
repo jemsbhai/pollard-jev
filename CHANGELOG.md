@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.12 — 2026-09-27
+
+- Standardize public documentation around the supported local runtime and cache.
+- Replace machine-specific reproduction paths with portable examples and omit
+  local executable paths from published benchmark snapshots.
+- Runtime behavior, dependencies and benchmark measurements are unchanged.
+
 ## 0.11 — 2026-09-27
 
 Reproducible local OpenJev benchmarks and opt-in input experiments, with the

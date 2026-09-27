@@ -1,7 +1,7 @@
 # Local OpenJev benchmark
 
 On 2026-09-27 the pinned **4B v2 model ran successfully on the RTX 4090 Laptop
-GPU**, reusing the Shellhacks project's existing Python environment and model
+GPU**, reusing an existing local Python environment and model
 cache. No packages or model files were downloaded or installed. This completes
 the first real-model run and a small synthetic benchmark; the 0.8B comparison,
 recorded-sensor evaluation and device integration remain outstanding.
@@ -16,17 +16,18 @@ inference.
 
 From the pollard-jev repository in PowerShell, select an **existing** Python
 environment containing Pollard and the optional OpenJev dependencies, and an
-**existing** cache containing the pinned checkpoint. This machine's working paths:
+**existing** cache containing the pinned checkpoint. Replace the illustrative
+paths below with the paths to your existing environment and cache:
 
 ```powershell
-$modelPython = 'E:\data\code\hackathons\shellhacks2026\.venv\Scripts\python.exe'
-$existingCache = 'E:\data\code\hackathons\shellhacks2026\.state\openjev-cache'
+$modelPython = 'C:\path\to\openjev-env\Scripts\python.exe'
+$existingCache = 'C:\path\to\openjev-cache'
 $resultDirectory = 'artifacts/benchmarks/local4b-' + (Get-Date -Format 'yyyyMMdd-HHmmss')
 & $modelPython scripts/benchmark_local.py --cache-dir $existingCache --output $resultDirectory --device cuda --cases-per-scenario 4
 ```
 
 The script uses this checkout's source without installing it into or changing
-the other project's environment. The output directory must be new or empty.
+the existing environment. The output directory must be new or empty.
 It sets Hugging Face/Transformers offline flags, disables implicit tokens and
 telemetry, blocks Python socket connections, and uses `local_files_only=True`.
 Missing dependencies or cached files cause failure; there is no download or
@@ -118,6 +119,8 @@ The [repository result snapshot](benchmarks/2026-09-27-4b.json) contains metrics
 all held-out decisions and scores, runtime/source provenance, model hashes and
 local artifact hashes. Complete local artifacts are under
 `artifacts/benchmarks/2026-09-27-4b/` (ignored by Git).
+Machine-specific executable paths are omitted from published result snapshots;
+model hashes, runtime versions and measurements are retained.
 
 ## Interpretation and next work
 

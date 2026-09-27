@@ -5,12 +5,12 @@ choices into a governed decision, a bounded simulated action, and an outcome
 record. The first milestone runs entirely offline after installation. It needs
 no credentials, model weights, or GPU.
 
-Current release: **0.11**. This release adds reproducible local OpenJev benchmarks,
-opt-in input experiments and documented results. See the
+Current release: **0.12**, with reproducible local OpenJev benchmarks,
+opt-in input experiments and updated reproduction guides. See the
 [changelog](https://github.com/jemsbhai/pollard-jev/blob/main/CHANGELOG.md).
 
 ```powershell
-python -m pip install --upgrade pollard-jev==0.11
+python -m pip install --upgrade pollard-jev==0.12
 pollard-jev demo --output artifacts
 ```
 
@@ -211,7 +211,7 @@ exactly-once actuator infrastructure.
 
 The implemented adapter targets `AlexWortega/openjev/qwen3.5-4b-nli-v2` at a
 pinned commit. **Real 4B inference was verified on Windows/CUDA on 2026-09-27**,
-reusing the existing Shellhacks environment and cache without any downloads or
+reusing an existing local runtime and model cache without any downloads or
 installs. The local runner records hashes and runtime versions, enforces offline
 loading, and rejects input truncation. See [OpenJev setup and evidence](https://github.com/jemsbhai/pollard-jev/blob/main/docs/openjev.md)
 and [benchmark method, command and results](https://github.com/jemsbhai/pollard-jev/blob/main/docs/BENCHMARKING.md).

@@ -1,7 +1,7 @@
 # Input representation and task-rule experiment
 
 This follow-up investigates the 4B model's low-battery and obstacle errors from
-the [first benchmark](BENCHMARKING.md). It reuses the Shellhacks Python/runtime
+the [first benchmark](BENCHMARKING.md). It reuses an existing local Python runtime
 and pinned checkpoint entirely offline. No weights or packages were downloaded,
 installed or trained. These runs used a development checkout reporting package
 version `0.1`; historical provenance retains that value. The benchmark tools and
@@ -133,14 +133,17 @@ are preserved in `artifacts/benchmarks/2026-09-27-rules-evaluation/`; the
 development directories end in `representation-development` and
 `rules-development`. These are additional results; the first benchmark was
 not replaced or reinterpreted as an unseen test set.
+Machine-specific executable paths are omitted from published result snapshots;
+model hashes, runtime versions and measurements are retained.
 
 ## Reproduction without downloads
 
-Run from this checkout using the existing environment and cache:
+Run from this checkout using an existing environment and cache. Replace the
+illustrative paths below with the paths to your existing environment and cache:
 
 ```powershell
-$modelPython = 'E:\data\code\hackathons\shellhacks2026\.venv\Scripts\python.exe'
-$existingCache = 'E:\data\code\hackathons\shellhacks2026\.state\openjev-cache'
+$modelPython = 'C:\path\to\openjev-env\Scripts\python.exe'
+$existingCache = 'C:\path\to\openjev-cache'
 $resultDirectory = 'artifacts/benchmarks/rules-comparison-' + (Get-Date -Format 'yyyyMMdd-HHmmss')
 & $modelPython scripts/compare_representations.py --cache-dir $existingCache --output $resultDirectory --stage evaluation --candidate robot-rules-v1 --cases-per-scenario 8
 ```

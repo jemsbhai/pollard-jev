@@ -19,7 +19,7 @@ bounded outstanding workers, and history without actuator side effects.
 
 The optional OpenJev adapter has 22 mapping/cache-loader tests using test doubles.
 The original offline milestone did not run model weights. On 2026-09-27 a separate
-real 4B CUDA benchmark reused the existing Shellhacks environment/cache with no
+real 4B CUDA benchmark reused an existing local runtime and model cache with no
 downloads or installs. It completed 32 calibration cases, 32 held-out cases and
 one warmup. Model proposals matched 12/20 held-out action labels; the calibrated
 policy executed 11 correct simulated actions, no wrong actions, and abstained

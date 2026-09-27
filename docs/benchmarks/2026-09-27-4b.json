@@ -19,7 +19,7 @@
   },
   "environment": {
     "device": "cuda",
-    "executable": "E:\\data\\code\\hackathons\\shellhacks2026\\.venv\\Scripts\\python.exe",
+    "executable": "[local path omitted]",
     "git_commit": "b6ffc27e76aaae295cce7f33252cdeacc8f90268",
     "git_status": "?? scripts/benchmark_local.py\n?? src/pollard_jev/benchmark.py\n?? src/pollard_jev/providers/context.py\n?? tests/test_benchmark.py\n?? tests/test_context.py",
     "gpu": "NVIDIA GeForce RTX 4090 Laptop GPU",

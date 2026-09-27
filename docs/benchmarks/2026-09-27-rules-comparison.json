@@ -5916,7 +5916,7 @@
     }
   },
   "environment": {
-    "executable": "E:\\data\\code\\hackathons\\shellhacks2026\\.venv\\Scripts\\python.exe",
+    "executable": "[local path omitted]",
     "git_commit": "b6ffc27e76aaae295cce7f33252cdeacc8f90268",
     "git_status": "M CHANGELOG.md\n M MANIFEST.in\n M README.md\n M docs/IMPLEMENTATION.md\n M docs/openjev.md\n M src/pollard_jev/providers/openjev.py\n?? docs/BENCHMARKING.md\n?? docs/benchmarks/\n?? scripts/benchmark_local.py\n?? scripts/compare_representations.py\n?? src/pollard_jev/benchmark.py\n?? src/pollard_jev/benchmark_stress.py\n?? src/pollard_jev/providers/context.py\n?? src/pollard_jev/providers/representations.py\n?? tests/test_benchmark.py\n?? tests/test_benchmark_local.py\n?? tests/test_benchmark_stress.py\n?? tests/test_compare_representations.py\n?? tests/test_context.py\n?? tests/test_representations.py",
     "gpu": "NVIDIA GeForce RTX 4090 Laptop GPU",
