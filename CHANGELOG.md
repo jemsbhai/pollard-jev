@@ -1,6 +1,9 @@
 # Changelog
 
-## Unreleased
+## 0.11 — 2026-09-27
+
+Reproducible local OpenJev benchmarks and opt-in input experiments, with the
+offline demo and original JSON input retained as defaults.
 
 - Opt-in versioned factual-text and fixed robot-rule input variants; original
   JSON rendering stays the default and representation is recorded in identity.

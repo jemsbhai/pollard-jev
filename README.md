@@ -5,8 +5,12 @@ choices into a governed decision, a bounded simulated action, and an outcome
 record. The first milestone runs entirely offline after installation. It needs
 no credentials, model weights, or GPU.
 
+Current release: **0.11**. This release adds reproducible local OpenJev benchmarks,
+opt-in input experiments and documented results. See the
+[changelog](https://github.com/jemsbhai/pollard-jev/blob/main/CHANGELOG.md).
+
 ```powershell
-python -m pip install pollard-jev
+python -m pip install --upgrade pollard-jev==0.11
 pollard-jev demo --output artifacts
 ```
 

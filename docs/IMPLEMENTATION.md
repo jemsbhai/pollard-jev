@@ -27,9 +27,10 @@ on 21 cases. The state machine matched all 32 expected outcomes. Median model
 end-to-end decision time was 0.534 seconds. See [benchmark details](BENCHMARKING.md).
 These are synthetic feature cases; physical controllers and energy remain untested.
 
-The benchmark and representation additions pass 206 offline tests. Version consistency, the
-non-isolated wheel/source build and strict Twine checks passed without package
-downloads. This work is unreleased; the package version remains `0.1`.
+Version `0.11` includes the benchmark and representation additions, with 206
+offline tests passing. Linux/Windows CI, version consistency, wheel/source builds
+and strict Twine checks pass. Local validation reuses installed tooling and
+cached dependencies without fetching model files or additional dependencies.
 
 The resource budget counts logical provider batch attempts, not tokens, GPU
 forward passes, or joules. Native inference may continue after timeout; late

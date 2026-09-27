@@ -3,7 +3,9 @@
 This follow-up investigates the 4B model's low-battery and obstacle errors from
 the [first benchmark](BENCHMARKING.md). It reuses the Shellhacks Python/runtime
 and pinned checkpoint entirely offline. No weights or packages were downloaded,
-installed or trained. Package version `0.1` and default JSON inputs are unchanged.
+installed or trained. These runs used a development checkout reporting package
+version `0.1`; historical provenance retains that value. The benchmark tools and
+input variants are included in release `0.11`. JSON remains the default.
 
 The rules candidate produced a small held-out gain, but remains experimental:
 obstacle and near-threshold errors persist, and one matched observation-order

@@ -23,7 +23,9 @@ specifies `Qwen3_5ForSequenceClassification`, those label IDs, and
 now recommends v5 for typed decisions; v2 remains a documented NLI checkpoint.
 This first adapter deliberately exposes that NLI interface and supports text
 features only. It does not implement image input, sensor encoders, v5 typed
-rubrics, calibration, or the separate SemIf project. OpenJev is an independent
+rubrics, probability calibration, or the separate SemIf project. The benchmark
+can select policy thresholds on a separate calibration split without changing
+the model's scores. OpenJev is an independent
 implementation, not TypeSafe Jev's disclosed implementation or weights.
 
 The model card declares MIT. No standalone LICENSE file appeared in the inspected

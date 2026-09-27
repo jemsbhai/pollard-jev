@@ -6,6 +6,12 @@ cache. No packages or model files were downloaded or installed. This completes
 the first real-model run and a small synthetic benchmark; the 0.8B comparison,
 recorded-sensor evaluation and device integration remain outstanding.
 
+Release `0.11` includes the benchmark modules and documentation. The runner
+scripts are included in the source distribution and repository; use a checkout
+of tag `v0.11` or an extracted source archive to run the commands below.
+Historical result snapshots retain the development package version used during
+inference.
+
 ## Run again without downloads
 
 From the pollard-jev repository in PowerShell, select an **existing** Python
