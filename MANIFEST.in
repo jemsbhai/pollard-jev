@@ -1,5 +1,7 @@
 include README.md LICENSE CHANGELOG.md AGENTS.md
 include docs/POLLARD_API.md docs/openjev.md docs/IMPLEMENTATION.md docs/RELEASING.md
+include docs/BENCHMARKING.md docs/benchmarks/2026-09-27-4b.json
+include docs/REPRESENTATION_EXPERIMENT.md docs/benchmarks/2026-09-27-rules-comparison.json
 recursive-include src/pollard_jev *.py py.typed
 recursive-include tests *.py
 recursive-include examples *.py

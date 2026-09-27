@@ -13,6 +13,7 @@ from pathlib import Path
 from typing import Any, Protocol
 
 from ..contracts import DecisionRequest, NLIScores, ProviderIdentity, ProviderResult
+from .representations import REPRESENTATIONS, render_premise
 
 REPOSITORY = "AlexWortega/openjev"
 REVISION = "552759daad712f1af6c4c13dabcb1e047886fc9c"
@@ -32,6 +33,8 @@ class OpenJevProvider:
     An injected encoder must implement the upstream ``predict_hypotheses``
     signature. Its caller supplies honest model identity, including whether it
     is synthetic. Action feasibility remains the deterministic policy's job.
+    Input defaults to the original JSON. Experimental ``robot-rules-v1`` adds
+    fixed default-demo task rules; these do not track custom policy settings.
     """
 
     def __init__(
@@ -41,7 +44,11 @@ class OpenJevProvider:
         model: str = f"{REPOSITORY}/{CHECKPOINT}",
         model_version: str = REVISION,
         synthetic: bool = False,
+        representation: str = "json-v1",
     ) -> None:
+        if representation not in REPRESENTATIONS:
+            raise ValueError(f"Unknown input representation: {representation!r}")
+        self._representation = representation
         self._encoder = encoder
         self.identity = ProviderIdentity(
             provider="alexwortega-openjev",
@@ -49,7 +56,13 @@ class OpenJevProvider:
             model=model,
             model_version=model_version,
             synthetic=synthetic,
+            settings={"input_representation": representation},
         )
+
+    @property
+    def representation(self) -> str:
+        """Keep the rendered input format consistent with the audit identity."""
+        return self._representation
 
     @classmethod
     def from_local_cache(
@@ -58,6 +71,7 @@ class OpenJevProvider:
         cache_dir: str | Path | None = None,
         device: str | None = None,
         max_length: int = 4096,
+        representation: str = "json-v1",
     ) -> OpenJevProvider:
         """Load the inspected helper and weights from the HF cache, offline.
 
@@ -66,6 +80,8 @@ class OpenJevProvider:
         """
         if isinstance(max_length, bool) or not isinstance(max_length, int) or max_length < 1:
             raise ValueError("max_length must be a positive integer")
+        if representation not in REPRESENTATIONS:
+            raise ValueError(f"Unknown input representation: {representation!r}")
         try:
             from huggingface_hub import snapshot_download
         except ImportError as exc:
@@ -103,6 +119,7 @@ class OpenJevProvider:
                 f"{REVISION};max_len={max_length};dtype=bfloat16;"
                 f"device={getattr(encoder, 'device', device or 'auto')}"
             ),
+            representation=representation,
         )
 
     def infer(self, requests: tuple[DecisionRequest, ...]) -> tuple[ProviderResult, ...]:
@@ -122,12 +139,7 @@ class OpenJevProvider:
             )
         # Preserve timestamps, units, unknown markers and validity limits.
         # This is a text representation of engineered features, not a sensor encoder.
-        premise = json.dumps({
-            "question": request.question,
-            "created_at": request.created_at.isoformat(),
-            "valid_until": request.valid_until.isoformat(),
-            "observations": [obs.model_dump(mode="json") for obs in request.observations],
-        }, sort_keys=True, allow_nan=False)
+        premise = render_premise(request, self.representation)
         hypotheses = [choice.hypothesis for choice in request.choices]
         raw = self._encoder.predict_hypotheses(premise, hypotheses)
         rows = _validated_rows(raw, len(request.choices))

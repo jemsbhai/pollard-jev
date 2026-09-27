@@ -1,0 +1,1114 @@
+{
+  "artifact_sha256": {
+    "calibration-grid.json": "0d16b91ca6ec9522f4aeb242a58a6dfae3a830eefdb650a2f24402bdd02c25bf",
+    "calibration-records.jsonl": "64ec3ab6882055c925455724f50cacd57b515aa6738975f69c21b877b9ac26de",
+    "calibration-run.json": "27135c12da843dbf3cc67ee1082ff8e28d4909c34d671e818c3973e4ff96e615",
+    "context-measurements.json": "2fe3b366fdd0dd88138dd33e14daf679850f245a89de6b07690cd8be301a819d",
+    "corpus.json": "6ef22b4d518b80b7ecd378210eaadcde1f73918ed034916f437d70f733e82642",
+    "environment.json": "c32fcff76498aa8762740fe8f8fe1b62ff8bddd867695fc3cae4c6647aa53b56",
+    "heldout-default-policy-replay.json": "800018dcaa7c3cd9ad5792e7ee1924be8f9d1ddee15525a96daa313a839d0f12",
+    "heldout-records.jsonl": "4ef1fa0380701e9ed9f06bc43e55db766d1a5f58db8e8b01cdfcf3f49133685c",
+    "heldout-run.json": "fba0e498a7c6fa22c02a4234669b82ae1b0b52f754cbc350c257fa35d43aa330",
+    "model-manifest.json": "5172053b3dd3bd99b22b3098f4fa6df9456e58a9855c2602a01a109f0be5fa99",
+    "summary.json": "e04826f56b1303562de93cc080682f18ecd2994b8893621a4000d92329211d11"
+  },
+  "context": {
+    "maximum_pair_tokens": 588,
+    "measured_calls": 65,
+    "overflow_count": 0
+  },
+  "environment": {
+    "device": "cuda",
+    "executable": "E:\\data\\code\\hackathons\\shellhacks2026\\.venv\\Scripts\\python.exe",
+    "git_commit": "b6ffc27e76aaae295cce7f33252cdeacc8f90268",
+    "git_status": "?? scripts/benchmark_local.py\n?? src/pollard_jev/benchmark.py\n?? src/pollard_jev/providers/context.py\n?? tests/test_benchmark.py\n?? tests/test_context.py",
+    "gpu": "NVIDIA GeForce RTX 4090 Laptop GPU",
+    "gpu_total_bytes": 17170956288,
+    "packages": {
+      "Jinja2": "3.1.6",
+      "MarkupSafe": "3.0.3",
+      "PyYAML": "6.0.3",
+      "Pygments": "2.21.0",
+      "annotated-doc": "0.0.5",
+      "annotated-types": "0.8.0",
+      "anyio": "4.15.1",
+      "bleak": "3.0.2",
+      "certifi": "2026.7.22",
+      "cffi": "2.1.1",
+      "charset-normalizer": "3.5.1",
+      "click": "8.5.0",
+      "colorama": "0.4.6",
+      "cryptography": "50.0.1",
+      "distro": "1.9.0",
+      "dnspython": "2.8.0",
+      "fastapi": "0.141.1",
+      "filelock": "4.0.4",
+      "fsspec": "2026.9.0",
+      "google-auth": "2.58.1",
+      "google-genai": "2.25.0",
+      "h11": "0.16.0",
+      "hf-xet": "1.6.0",
+      "httpcore": "1.0.9",
+      "httpx": "0.28.1",
+      "huggingface_hub": "1.33.0",
+      "idna": "3.20",
+      "iniconfig": "2.3.0",
+      "jsonalias": "0.1.1",
+      "markdown-it-py": "4.2.0",
+      "mdurl": "0.1.2",
+      "mpmath": "1.3.0",
+      "networkx": "3.7",
+      "numpy": "2.5.3",
+      "packaging": "26.3",
+      "pillow": "12.3.0",
+      "pip": "24.0",
+      "pluggy": "1.6.0",
+      "pollard": "1.6.0",
+      "pollard-jev": "0.1",
+      "psycopg": "3.3.6",
+      "psycopg-binary": "3.3.6",
+      "pyasn1": "0.6.4",
+      "pyasn1_modules": "0.4.2",
+      "pycparser": "3.0",
+      "pydantic": "2.13.5",
+      "pydantic_core": "2.46.5",
+      "pymongo": "4.15.1",
+      "pytest": "9.1.1",
+      "regex": "2026.9.10",
+      "relay-gateway": "0.1.0",
+      "requests": "2.34.2",
+      "rich": "15.0.0",
+      "safetensors": "0.8.0",
+      "setuptools": "81.0.0",
+      "shellingham": "1.5.4",
+      "sniffio": "1.3.1",
+      "solders": "0.29.0",
+      "starlette": "1.7.0",
+      "sympy": "1.14.0",
+      "tenacity": "9.1.4",
+      "tokenizers": "0.22.2",
+      "torch": "2.11.0+cu128",
+      "tqdm": "4.70.1",
+      "transformers": "5.15.0",
+      "typer": "0.27.2",
+      "typing-inspection": "0.4.4",
+      "typing_extensions": "4.16.0",
+      "tzdata": "2026.4",
+      "urllib3": "2.8.0",
+      "uvicorn": "0.54.0",
+      "websockets": "16.1.1",
+      "winrt-Windows.Devices.Bluetooth": "3.2.1",
+      "winrt-Windows.Devices.Bluetooth.Advertisement": "3.2.1",
+      "winrt-Windows.Devices.Bluetooth.GenericAttributeProfile": "3.2.1",
+      "winrt-Windows.Devices.Enumeration": "3.2.1",
+      "winrt-Windows.Devices.Radios": "3.2.1",
+      "winrt-Windows.Foundation": "3.2.1",
+      "winrt-Windows.Foundation.Collections": "3.2.1",
+      "winrt-Windows.Storage.Streams": "3.2.1",
+      "winrt-runtime": "3.2.1"
+    },
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.12.2 (tags/v3.12.2:6abddd9, Feb  6 2024, 21:26:36) [MSC v.1937 64 bit (AMD64)]",
+    "source_sha256": {
+      "scripts/benchmark_local.py": "b55fe8a359fc9ed2f833104ab475dfbb0f075d0a90763a60e2b0f63c97a71335",
+      "src/pollard_jev/__init__.py": "21a4365dcd999f8b3c08690aaa324be182081c9e1e4f068377c3e434027dab8a",
+      "src/pollard_jev/__main__.py": "5bb72cb66b28fc9c3abcb6c4c4773c3fe0aad5e5e4b97a7e872f5f7463610be9",
+      "src/pollard_jev/benchmark.py": "411c3ba6274ce04d72b7e92339f7fa578f85508a43165bbbec2488264319f49b",
+      "src/pollard_jev/contracts.py": "715e3c4d1a99f0f499e19c89e39520bb3a3c6fc01787652d419526687b0977f2",
+      "src/pollard_jev/demo.py": "3599dbd7f7c5afc833b0ad2a38bd94fc8d29643a5863b6012b87ff48f6061c17",
+      "src/pollard_jev/loop.py": "c45088e4d5d98d517f517f4dc75baf32a23e462230b2d901d905040b70392ab4",
+      "src/pollard_jev/policy.py": "6e59bea513ebb602e07eaa97e35e062b3487472361292f9b2ec4ba6b7bfa8f6d",
+      "src/pollard_jev/providers/__init__.py": "c6c501ca7be58a5a043d3dc92eb95760ac2f38d90d06b662ec2f9fc422c41628",
+      "src/pollard_jev/providers/base.py": "f0a920b86c2f235a9e6eb14162effab3969cf5c2a826371df405a942ed2167ef",
+      "src/pollard_jev/providers/context.py": "c7e7ccc39ac0e6e0adb8376c55798c2a15ce16a826d3754ea9f9a1e7dd2ad31b",
+      "src/pollard_jev/providers/fixture.py": "925e12fa7d8a7c326f8ce51b5a05ea7337855d34dc64c95ba01aee5c0c3e8ede",
+      "src/pollard_jev/providers/openjev.py": "0d69b3892171c35ce279b79ab394c6b6e113dfc8535c6d6d46b99cd9d3aee6a2",
+      "src/pollard_jev/records.py": "e9e894f3b5ad9e6ad5c58b7c6d7e5a88de15c08d6a12a0b46b9c38ec4ca579bb",
+      "src/pollard_jev/simulator.py": "4304afb78da64eb67a5d7c9b3d66ec0f3141b2075db13605d0b0c1ce37aec729"
+    },
+    "torch_cuda": "12.8"
+  },
+  "heldout_decisions": [
+    {
+      "expected": "request_help",
+      "latency_s": 0.49577139999928477,
+      "policy": {
+        "action": null,
+        "disposition": "defer",
+        "evaluated_at": "2026-09-27T12:00:00Z",
+        "parameters": {},
+        "policy_version": "robot-demo-policy-v1",
+        "reason": "insufficient_support_or_margin",
+        "request_id": "r-84e6b3265a49461333125791"
+      },
+      "proposal": "continue",
+      "request_id": "r-84e6b3265a49461333125791",
+      "scenario": "low_battery",
+      "scores": {
+        "continue": 0.5990282893180847,
+        "inspect": 0.1873052567243576,
+        "recover": 0.4657195806503296,
+        "request_help": 0.3640245497226715
+      }
+    },
+    {
+      "expected": "continue",
+      "latency_s": 0.6088316000004852,
+      "policy": {
+        "action": "continue",
+        "disposition": "accept",
+        "evaluated_at": "2026-09-27T12:00:00Z",
+        "parameters": {
+          "distance_cm": 20
+        },
+        "policy_version": "robot-demo-policy-v1",
+        "reason": "supported_and_feasible",
+        "request_id": "r-dfca53d328266670a45be924"
+      },
+      "proposal": "continue",
+      "request_id": "r-dfca53d328266670a45be924",
+      "scenario": "clear",
+      "scores": {
+        "continue": 0.8101840019226074,
+        "inspect": 0.17037136852741241,
+        "recover": 0.5983923673629761,
+        "request_help": 0.16345776617527008
+      }
+    },
+    {
+      "expected": "inspect",
+      "latency_s": 0.501065299999027,
+      "policy": {
+        "action": null,
+        "disposition": "defer",
+        "evaluated_at": "2026-09-27T12:00:00Z",
+        "parameters": {},
+        "policy_version": "robot-demo-policy-v1",
+        "reason": "action_infeasible",
+        "request_id": "r-209386c35a443ccf241fe451"
+      },
+      "proposal": "continue",
+      "request_id": "r-209386c35a443ccf241fe451",
+      "scenario": "obstacle",
+      "scores": {
+        "continue": 0.8242999315261841,
+        "inspect": 0.1734820455312729,
+        "recover": 0.6121560335159302,
+        "request_help": 0.10296186059713364
+      }
+    },
+    {
+      "expected": "need_evidence",
+      "latency_s": 0.48961619999863615,
+      "policy": {
+        "action": null,
+        "disposition": "need_evidence",
+        "evaluated_at": "2026-09-27T12:00:00Z",
+        "parameters": {},
+        "policy_version": "robot-demo-policy-v1",
+        "reason": "missing_evidence",
+        "request_id": "r-bcb3c4eafa0ea8c4321088f7"
+      },
+      "proposal": "continue",
+      "request_id": "r-bcb3c4eafa0ea8c4321088f7",
+      "scenario": "missing",
+      "scores": {
+        "continue": 0.9131370782852173,
+        "inspect": 0.1681426763534546,
+        "recover": 0.6522141098976135,
+        "request_help": 0.0519959032535553
+      }
+    },
+    {
+      "expected": "inspect",
+      "latency_s": 0.4895212999999785,
+      "policy": {
+        "action": null,
+        "disposition": "defer",
+        "evaluated_at": "2026-09-27T12:00:00Z",
+        "parameters": {},
+        "policy_version": "robot-demo-policy-v1",
+        "reason": "action_infeasible",
+        "request_id": "r-b3ff7f28d1708272abfce99a"
+      },
+      "proposal": "continue",
+      "request_id": "r-b3ff7f28d1708272abfce99a",
+      "scenario": "obstacle",
+      "scores": {
+        "continue": 0.7809492945671082,
+        "inspect": 0.1695447862148285,
+        "recover": 0.6303310990333557,
+        "request_help": 0.15792614221572876
+      }
+    },
+    {
+      "expected": "request_help",
+      "latency_s": 0.5304503999996086,
+      "policy": {
+        "action": null,
+        "disposition": "defer",
+        "evaluated_at": "2026-09-27T12:00:00Z",
+        "parameters": {},
+        "policy_version": "robot-demo-policy-v1",
+        "reason": "insufficient_support_or_margin",
+        "request_id": "r-fde42d623c6a583b24c433cf"
+      },
+      "proposal": "continue",
+      "request_id": "r-fde42d623c6a583b24c433cf",
+      "scenario": "low_battery",
+      "scores": {
+        "continue": 0.46215733885765076,
+        "inspect": 0.1714160293340683,
+        "recover": 0.3920075297355652,
+        "request_help": 0.3825986385345459
+      }
+    },
+    {
+      "expected": "continue",
+      "latency_s": 0.6031684999998106,
+      "policy": {
+        "action": "continue",
+        "disposition": "accept",
+        "evaluated_at": "2026-09-27T12:00:00Z",
+        "parameters": {
+          "distance_cm": 20
+        },
+        "policy_version": "robot-demo-policy-v1",
+        "reason": "supported_and_feasible",
+        "request_id": "r-b19aed964bf61a1edd332a35"
+      },
+      "proposal": "continue",
+      "request_id": "r-b19aed964bf61a1edd332a35",
+      "scenario": "noisy_coherent",
+      "scores": {
+        "continue": 0.8236331343650818,
+        "inspect": 0.16586223244667053,
+        "recover": 0.6220653057098389,
+        "request_help": 0.14858032763004303
+      }
+    },
+    {
+      "expected": "request_help",
+      "latency_s": 0.5093681999987894,
+      "policy": {
+        "action": null,
+        "disposition": "defer",
+        "evaluated_at": "2026-09-27T12:00:00Z",
+        "parameters": {},
+        "policy_version": "robot-demo-policy-v1",
+        "reason": "insufficient_support_or_margin",
+        "request_id": "r-978177fd2ffb8a37781e51ac"
+      },
+      "proposal": "continue",
+      "request_id": "r-978177fd2ffb8a37781e51ac",
+      "scenario": "low_battery",
+      "scores": {
+        "continue": 0.48449990153312683,
+        "inspect": 0.1771428883075714,
+        "recover": 0.36166492104530334,
+        "request_help": 0.3415699899196625
+      }
+    },
+    {
+      "expected": "inspect",
+      "latency_s": 0.537985099999787,
+      "policy": {
+        "action": null,
+        "disposition": "defer",
+        "evaluated_at": "2026-09-27T12:00:00Z",
+        "parameters": {},
+        "policy_version": "robot-demo-policy-v1",
+        "reason": "action_infeasible",
+        "request_id": "r-89a01b40856bc2cdc5c1a5ee"
+      },
+      "proposal": "continue",
+      "request_id": "r-89a01b40856bc2cdc5c1a5ee",
+      "scenario": "obstacle",
+      "scores": {
+        "continue": 0.792896032333374,
+        "inspect": 0.17530007660388947,
+        "recover": 0.6448072791099548,
+        "request_help": 0.15477940440177917
+      }
+    },
+    {
+      "expected": "continue",
+      "latency_s": 0.5058723000001919,
+      "policy": {
+        "action": "continue",
+        "disposition": "accept",
+        "evaluated_at": "2026-09-27T12:00:00Z",
+        "parameters": {
+          "distance_cm": 20
+        },
+        "policy_version": "robot-demo-policy-v1",
+        "reason": "supported_and_feasible",
+        "request_id": "r-ee7537f5349c588b6b55ab87"
+      },
+      "proposal": "continue",
+      "request_id": "r-ee7537f5349c588b6b55ab87",
+      "scenario": "clear",
+      "scores": {
+        "continue": 0.7329932451248169,
+        "inspect": 0.1732068806886673,
+        "recover": 0.5556322336196899,
+        "request_help": 0.21035461127758026
+      }
+    },
+    {
+      "expected": "inspect",
+      "latency_s": 0.5447841999994125,
+      "policy": {
+        "action": null,
+        "disposition": "defer",
+        "evaluated_at": "2026-09-27T12:00:00Z",
+        "parameters": {},
+        "policy_version": "robot-demo-policy-v1",
+        "reason": "action_infeasible",
+        "request_id": "r-05074bd4b30fc1b7169efa4e"
+      },
+      "proposal": "continue",
+      "request_id": "r-05074bd4b30fc1b7169efa4e",
+      "scenario": "obstacle",
+      "scores": {
+        "continue": 0.7367008924484253,
+        "inspect": 0.17533740401268005,
+        "recover": 0.5789455771446228,
+        "request_help": 0.1888870894908905
+      }
+    },
+    {
+      "expected": "need_evidence",
+      "latency_s": 0.5860886999998911,
+      "policy": {
+        "action": null,
+        "disposition": "need_evidence",
+        "evaluated_at": "2026-09-27T12:00:00Z",
+        "parameters": {},
+        "policy_version": "robot-demo-policy-v1",
+        "reason": "conflicting_evidence",
+        "request_id": "r-4900d4563b737e8072de013e"
+      },
+      "proposal": "continue",
+      "request_id": "r-4900d4563b737e8072de013e",
+      "scenario": "conflicting",
+      "scores": {
+        "continue": 0.839297890663147,
+        "inspect": 0.17108020186424255,
+        "recover": 0.6137753129005432,
+        "request_help": 0.11226313561201096
+      }
+    },
+    {
+      "expected": "recover",
+      "latency_s": 0.6294340000004013,
+      "policy": {
+        "action": "recover",
+        "disposition": "accept",
+        "evaluated_at": "2026-09-27T12:00:00Z",
+        "parameters": {
+          "distance_cm": 10
+        },
+        "policy_version": "robot-demo-policy-v1",
+        "reason": "supported_and_feasible",
+        "request_id": "r-b04cd59e3a8793b4286ebbb3"
+      },
+      "proposal": "recover",
+      "request_id": "r-b04cd59e3a8793b4286ebbb3",
+      "scenario": "stuck",
+      "scores": {
+        "continue": 0.22496990859508514,
+        "inspect": 0.17908112704753876,
+        "recover": 0.8496289849281311,
+        "request_help": 0.044321391731500626
+      }
+    },
+    {
+      "expected": "defer",
+      "latency_s": 0.6403339999997115,
+      "policy": {
+        "action": null,
+        "disposition": "defer",
+        "evaluated_at": "2026-09-27T12:00:00Z",
+        "parameters": {},
+        "policy_version": "robot-demo-policy-v1",
+        "reason": "stale_or_future_evidence",
+        "request_id": "r-375261a148c8978ff844e9fb"
+      },
+      "proposal": "continue",
+      "request_id": "r-375261a148c8978ff844e9fb",
+      "scenario": "stale",
+      "scores": {
+        "continue": 0.8655121922492981,
+        "inspect": 0.17616134881973267,
+        "recover": 0.6124637126922607,
+        "request_help": 0.11583463847637177
+      }
+    },
+    {
+      "expected": "recover",
+      "latency_s": 0.4982473000000027,
+      "policy": {
+        "action": "recover",
+        "disposition": "accept",
+        "evaluated_at": "2026-09-27T12:00:00Z",
+        "parameters": {
+          "distance_cm": 10
+        },
+        "policy_version": "robot-demo-policy-v1",
+        "reason": "supported_and_feasible",
+        "request_id": "r-2f00dece22b73a22fef227b5"
+      },
+      "proposal": "recover",
+      "request_id": "r-2f00dece22b73a22fef227b5",
+      "scenario": "stuck",
+      "scores": {
+        "continue": 0.21312880516052246,
+        "inspect": 0.17701326310634613,
+        "recover": 0.7486831545829773,
+        "request_help": 0.21002274751663208
+      }
+    },
+    {
+      "expected": "request_help",
+      "latency_s": 0.4850820999999996,
+      "policy": {
+        "action": null,
+        "disposition": "defer",
+        "evaluated_at": "2026-09-27T12:00:00Z",
+        "parameters": {},
+        "policy_version": "robot-demo-policy-v1",
+        "reason": "insufficient_support_or_margin",
+        "request_id": "r-9738aabeb8097ea7922db995"
+      },
+      "proposal": "continue",
+      "request_id": "r-9738aabeb8097ea7922db995",
+      "scenario": "low_battery",
+      "scores": {
+        "continue": 0.47320279479026794,
+        "inspect": 0.1816999316215515,
+        "recover": 0.3703234791755676,
+        "request_help": 0.36086633801460266
+      }
+    },
+    {
+      "expected": "need_evidence",
+      "latency_s": 0.5197395999985019,
+      "policy": {
+        "action": null,
+        "disposition": "need_evidence",
+        "evaluated_at": "2026-09-27T12:00:00Z",
+        "parameters": {},
+        "policy_version": "robot-demo-policy-v1",
+        "reason": "conflicting_evidence",
+        "request_id": "r-11804cc28c3c8c78d428a590"
+      },
+      "proposal": "continue",
+      "request_id": "r-11804cc28c3c8c78d428a590",
+      "scenario": "conflicting",
+      "scores": {
+        "continue": 0.8436132669448853,
+        "inspect": 0.17297226190567017,
+        "recover": 0.6442855596542358,
+        "request_help": 0.13518013060092926
+      }
+    },
+    {
+      "expected": "need_evidence",
+      "latency_s": 0.557482300000629,
+      "policy": {
+        "action": null,
+        "disposition": "need_evidence",
+        "evaluated_at": "2026-09-27T12:00:00Z",
+        "parameters": {},
+        "policy_version": "robot-demo-policy-v1",
+        "reason": "missing_evidence",
+        "request_id": "r-9708f166834917c6873f44a1"
+      },
+      "proposal": "continue",
+      "request_id": "r-9708f166834917c6873f44a1",
+      "scenario": "missing",
+      "scores": {
+        "continue": 0.918582558631897,
+        "inspect": 0.17533452808856964,
+        "recover": 0.6436277627944946,
+        "request_help": 0.07704362273216248
+      }
+    },
+    {
+      "expected": "continue",
+      "latency_s": 0.5798649999996996,
+      "policy": {
+        "action": "continue",
+        "disposition": "accept",
+        "evaluated_at": "2026-09-27T12:00:00Z",
+        "parameters": {
+          "distance_cm": 20
+        },
+        "policy_version": "robot-demo-policy-v1",
+        "reason": "supported_and_feasible",
+        "request_id": "r-b972ae1fe52ffd20c7e82891"
+      },
+      "proposal": "continue",
+      "request_id": "r-b972ae1fe52ffd20c7e82891",
+      "scenario": "noisy_coherent",
+      "scores": {
+        "continue": 0.8493642210960388,
+        "inspect": 0.1627493053674698,
+        "recover": 0.6740379333496094,
+        "request_help": 0.04944765567779541
+      }
+    },
+    {
+      "expected": "continue",
+      "latency_s": 0.5423166000000492,
+      "policy": {
+        "action": "continue",
+        "disposition": "accept",
+        "evaluated_at": "2026-09-27T12:00:00Z",
+        "parameters": {
+          "distance_cm": 20
+        },
+        "policy_version": "robot-demo-policy-v1",
+        "reason": "supported_and_feasible",
+        "request_id": "r-12b0d9fb0e46daf9fb79e5bc"
+      },
+      "proposal": "continue",
+      "request_id": "r-12b0d9fb0e46daf9fb79e5bc",
+      "scenario": "noisy_coherent",
+      "scores": {
+        "continue": 0.8244074583053589,
+        "inspect": 0.16892677545547485,
+        "recover": 0.5995925664901733,
+        "request_help": 0.10782231390476227
+      }
+    },
+    {
+      "expected": "recover",
+      "latency_s": 0.513011799999731,
+      "policy": {
+        "action": null,
+        "disposition": "defer",
+        "evaluated_at": "2026-09-27T12:00:00Z",
+        "parameters": {},
+        "policy_version": "robot-demo-policy-v1",
+        "reason": "insufficient_support_or_margin",
+        "request_id": "r-7eae37fac10c2def3ae46889"
+      },
+      "proposal": "recover",
+      "request_id": "r-7eae37fac10c2def3ae46889",
+      "scenario": "stuck",
+      "scores": {
+        "continue": 0.04839847981929779,
+        "inspect": 0.1699533313512802,
+        "recover": 0.5806958079338074,
+        "request_help": 0.29366180300712585
+      }
+    },
+    {
+      "expected": "need_evidence",
+      "latency_s": 0.5178615000004356,
+      "policy": {
+        "action": null,
+        "disposition": "need_evidence",
+        "evaluated_at": "2026-09-27T12:00:00Z",
+        "parameters": {},
+        "policy_version": "robot-demo-policy-v1",
+        "reason": "conflicting_evidence",
+        "request_id": "r-be6faee8f2c363e2069f3e53"
+      },
+      "proposal": "continue",
+      "request_id": "r-be6faee8f2c363e2069f3e53",
+      "scenario": "conflicting",
+      "scores": {
+        "continue": 0.8409478664398193,
+        "inspect": 0.16802790760993958,
+        "recover": 0.641721785068512,
+        "request_help": 0.07124396413564682
+      }
+    },
+    {
+      "expected": "need_evidence",
+      "latency_s": 0.5313950999989174,
+      "policy": {
+        "action": null,
+        "disposition": "need_evidence",
+        "evaluated_at": "2026-09-27T12:00:00Z",
+        "parameters": {},
+        "policy_version": "robot-demo-policy-v1",
+        "reason": "missing_evidence",
+        "request_id": "r-333381329e0f5bf31ea222b0"
+      },
+      "proposal": "continue",
+      "request_id": "r-333381329e0f5bf31ea222b0",
+      "scenario": "missing",
+      "scores": {
+        "continue": 0.8858493566513062,
+        "inspect": 0.154632106423378,
+        "recover": 0.5525206923484802,
+        "request_help": 0.1102762445807457
+      }
+    },
+    {
+      "expected": "continue",
+      "latency_s": 0.547383400000399,
+      "policy": {
+        "action": "continue",
+        "disposition": "accept",
+        "evaluated_at": "2026-09-27T12:00:00Z",
+        "parameters": {
+          "distance_cm": 20
+        },
+        "policy_version": "robot-demo-policy-v1",
+        "reason": "supported_and_feasible",
+        "request_id": "r-f5a4129362fa0501caf1de06"
+      },
+      "proposal": "continue",
+      "request_id": "r-f5a4129362fa0501caf1de06",
+      "scenario": "clear",
+      "scores": {
+        "continue": 0.8335031270980835,
+        "inspect": 0.16850344836711884,
+        "recover": 0.5945371985435486,
+        "request_help": 0.15528135001659393
+      }
+    },
+    {
+      "expected": "continue",
+      "latency_s": 0.5070530000011786,
+      "policy": {
+        "action": "continue",
+        "disposition": "accept",
+        "evaluated_at": "2026-09-27T12:00:00Z",
+        "parameters": {
+          "distance_cm": 20
+        },
+        "policy_version": "robot-demo-policy-v1",
+        "reason": "supported_and_feasible",
+        "request_id": "r-06cd6ed8f6ee6010ad820914"
+      },
+      "proposal": "continue",
+      "request_id": "r-06cd6ed8f6ee6010ad820914",
+      "scenario": "clear",
+      "scores": {
+        "continue": 0.8163650631904602,
+        "inspect": 0.1673789620399475,
+        "recover": 0.6624558568000793,
+        "request_help": 0.11927232146263123
+      }
+    },
+    {
+      "expected": "defer",
+      "latency_s": 0.593332399999781,
+      "policy": {
+        "action": null,
+        "disposition": "defer",
+        "evaluated_at": "2026-09-27T12:00:00Z",
+        "parameters": {},
+        "policy_version": "robot-demo-policy-v1",
+        "reason": "stale_or_future_evidence",
+        "request_id": "r-d5db08432627420688b42466"
+      },
+      "proposal": "continue",
+      "request_id": "r-d5db08432627420688b42466",
+      "scenario": "stale",
+      "scores": {
+        "continue": 0.8365886211395264,
+        "inspect": 0.17889021337032318,
+        "recover": 0.6951216459274292,
+        "request_help": 0.07430684566497803
+      }
+    },
+    {
+      "expected": "need_evidence",
+      "latency_s": 0.4749917999997706,
+      "policy": {
+        "action": null,
+        "disposition": "need_evidence",
+        "evaluated_at": "2026-09-27T12:00:00Z",
+        "parameters": {},
+        "policy_version": "robot-demo-policy-v1",
+        "reason": "missing_evidence",
+        "request_id": "r-233ac2382a62ac558c293cad"
+      },
+      "proposal": "continue",
+      "request_id": "r-233ac2382a62ac558c293cad",
+      "scenario": "missing",
+      "scores": {
+        "continue": 0.9218899011611938,
+        "inspect": 0.16633231937885284,
+        "recover": 0.6305001378059387,
+        "request_help": 0.06795406341552734
+      }
+    },
+    {
+      "expected": "defer",
+      "latency_s": 0.6109637999998085,
+      "policy": {
+        "action": null,
+        "disposition": "defer",
+        "evaluated_at": "2026-09-27T12:00:00Z",
+        "parameters": {},
+        "policy_version": "robot-demo-policy-v1",
+        "reason": "stale_or_future_evidence",
+        "request_id": "r-e1b4319b5a7bb70a6891c408"
+      },
+      "proposal": "continue",
+      "request_id": "r-e1b4319b5a7bb70a6891c408",
+      "scenario": "stale",
+      "scores": {
+        "continue": 0.8374979496002197,
+        "inspect": 0.17879408597946167,
+        "recover": 0.6685279607772827,
+        "request_help": 0.13710780441761017
+      }
+    },
+    {
+      "expected": "need_evidence",
+      "latency_s": 0.5368564999989758,
+      "policy": {
+        "action": null,
+        "disposition": "need_evidence",
+        "evaluated_at": "2026-09-27T12:00:00Z",
+        "parameters": {},
+        "policy_version": "robot-demo-policy-v1",
+        "reason": "conflicting_evidence",
+        "request_id": "r-f02cc6e7c57db13f57781d35"
+      },
+      "proposal": "continue",
+      "request_id": "r-f02cc6e7c57db13f57781d35",
+      "scenario": "conflicting",
+      "scores": {
+        "continue": 0.836121141910553,
+        "inspect": 0.1685546338558197,
+        "recover": 0.631568968296051,
+        "request_help": 0.1305168718099594
+      }
+    },
+    {
+      "expected": "defer",
+      "latency_s": 0.5319734000004246,
+      "policy": {
+        "action": null,
+        "disposition": "defer",
+        "evaluated_at": "2026-09-27T12:00:00Z",
+        "parameters": {},
+        "policy_version": "robot-demo-policy-v1",
+        "reason": "stale_or_future_evidence",
+        "request_id": "r-2473cbc0c0ac7815565acbc5"
+      },
+      "proposal": "continue",
+      "request_id": "r-2473cbc0c0ac7815565acbc5",
+      "scenario": "stale",
+      "scores": {
+        "continue": 0.863353967666626,
+        "inspect": 0.17996402084827423,
+        "recover": 0.6592628955841064,
+        "request_help": 0.09022156894207001
+      }
+    },
+    {
+      "expected": "recover",
+      "latency_s": 0.6355450999999448,
+      "policy": {
+        "action": "recover",
+        "disposition": "accept",
+        "evaluated_at": "2026-09-27T12:00:00Z",
+        "parameters": {
+          "distance_cm": 10
+        },
+        "policy_version": "robot-demo-policy-v1",
+        "reason": "supported_and_feasible",
+        "request_id": "r-f98f321e842afeb46bca6234"
+      },
+      "proposal": "recover",
+      "request_id": "r-f98f321e842afeb46bca6234",
+      "scenario": "stuck",
+      "scores": {
+        "continue": 0.287663072347641,
+        "inspect": 0.18206040561199188,
+        "recover": 0.8384925127029419,
+        "request_help": 0.08693013340234756
+      }
+    },
+    {
+      "expected": "continue",
+      "latency_s": 0.631182600000102,
+      "policy": {
+        "action": "continue",
+        "disposition": "accept",
+        "evaluated_at": "2026-09-27T12:00:00Z",
+        "parameters": {
+          "distance_cm": 20
+        },
+        "policy_version": "robot-demo-policy-v1",
+        "reason": "supported_and_feasible",
+        "request_id": "r-d182f64313f005f5f9384621"
+      },
+      "proposal": "continue",
+      "request_id": "r-d182f64313f005f5f9384621",
+      "scenario": "noisy_coherent",
+      "scores": {
+        "continue": 0.8332151770591736,
+        "inspect": 0.16486024856567383,
+        "recover": 0.6407663822174072,
+        "request_help": 0.11647630482912064
+      }
+    }
+  ],
+  "ledger_verification": {
+    "calibration": {
+      "findings": [],
+      "nodes": 148,
+      "ok": true
+    },
+    "heldout": {
+      "findings": [],
+      "nodes": 150,
+      "ok": true
+    }
+  },
+  "model_manifest": {
+    "checkpoint": "qwen3.5-4b-nli-v2",
+    "files": {
+      "modeling_openjev.py": {
+        "bytes": 13789,
+        "sha256": "071670d0879963ee69600ed31f0f3d5a37bee314461709477e8ac0e25f33fd97"
+      },
+      "qwen3.5-4b-nli-v2/config.json": {
+        "bytes": 3167,
+        "sha256": "477bed7614828c875db38b952835af9ca2fb5fa024af56cda8a708181db76a07"
+      },
+      "qwen3.5-4b-nli-v2/model.safetensors": {
+        "bytes": 9078635984,
+        "sha256": "f625c42c6bac1fbc03935f584d0126d096b6681bdc62d11f4a7c7f3b94bc35b3"
+      },
+      "qwen3.5-4b-nli-v2/tokenizer.json": {
+        "bytes": 19989325,
+        "sha256": "06b9509352d2af50381ab2247e083b80d32d5c0aba91c272ca9ff729b6a0e523"
+      },
+      "qwen3.5-4b-nli-v2/tokenizer_config.json": {
+        "bytes": 1125,
+        "sha256": "9cf04fffe3d8c3b85e439fb35c7acad0761ab51c422a8c4256d9f887c3a0be7d"
+      }
+    },
+    "repository": "AlexWortega/openjev",
+    "revision": "552759daad712f1af6c4c13dabcb1e047886fc9c"
+  },
+  "selected_calibration_candidate": {
+    "abstention_rate": 0.625,
+    "acceptance_threshold": 0.65,
+    "accepted_action_accuracy": 1.0,
+    "accepted_correct_count": 12,
+    "accepted_count": 12,
+    "accepted_wrong_count": 0,
+    "baseline_outcome_accuracy": 1.0,
+    "correct_action_coverage_on_eligible": 0.6,
+    "coverage": 0.375,
+    "eligible_action_cases": 20,
+    "eligible_action_coverage": 0.6,
+    "minimum_margin": 0.05,
+    "policy_outcome_accuracy": 0.75,
+    "proposal_accuracy_on_eligible": 0.6,
+    "proposal_correct_count": 12,
+    "proposal_coverage_on_eligible": 1.0,
+    "provider_status_counts": {
+      "ok": 32
+    },
+    "required_abstention_cases": 12,
+    "required_abstention_correct_count": 12,
+    "total_cases": 32,
+    "unexpected_abstention_count": 8
+  },
+  "summary": {
+    "calibration": {
+      "abstention_rate": 0.78125,
+      "accepted_action_accuracy": 1.0,
+      "accepted_correct_count": 7,
+      "accepted_count": 7,
+      "accepted_wrong_count": 0,
+      "baseline_decision_latency": {
+        "count": 32,
+        "max_s": 0.00014409999857889488,
+        "mean_s": 2.3071874977631524e-05,
+        "p50_s": 1.53499995576567e-05,
+        "p95_s": 5.3699999625678174e-05
+      },
+      "baseline_outcome_accuracy": 1.0,
+      "completed_simulated_actions": 7,
+      "correct_action_coverage_on_eligible": 0.35,
+      "coverage": 0.21875,
+      "eligible_action_cases": 20,
+      "eligible_action_coverage": 0.35,
+      "end_to_end_latency": {
+        "count": 32,
+        "max_s": 0.6919766000009986,
+        "mean_s": 0.5583809343749522,
+        "p50_s": 0.54172219999964,
+        "p95_s": 0.6520135999999184
+      },
+      "inference_loop_latency": {
+        "count": 32,
+        "max_s": 0.6869999999998981,
+        "mean_s": 0.55403124999998,
+        "p50_s": 0.5389999999997599,
+        "p95_s": 0.6559999999990396
+      },
+      "policy_outcome_accuracy": 0.59375,
+      "proposal_accuracy_on_eligible": 0.6,
+      "proposal_correct_count": 12,
+      "proposal_coverage_on_eligible": 1.0,
+      "provider_status_counts": {
+        "ok": 32
+      },
+      "required_abstention_cases": 12,
+      "required_abstention_correct_count": 12,
+      "total_cases": 32,
+      "unexpected_abstention_count": 13
+    },
+    "cases_per_scenario_per_split": 4,
+    "completed_at": "2026-09-27T16:59:34.852373+00:00",
+    "corpus_fingerprint": "86764e987be8604ba758b07bc534c14bbdbe7ac7ce23975d4425ae6528d7e2aa",
+    "encoder_forward_attempts": 65,
+    "heldout": {
+      "abstention_rate": 0.65625,
+      "accepted_action_accuracy": 1.0,
+      "accepted_correct_count": 11,
+      "accepted_count": 11,
+      "accepted_wrong_count": 0,
+      "baseline_decision_latency": {
+        "count": 32,
+        "max_s": 3.8800000766059384e-05,
+        "mean_s": 1.7171875128951797e-05,
+        "p50_s": 1.5300000086426735e-05,
+        "p95_s": 3.8300000596791506e-05
+      },
+      "baseline_outcome_accuracy": 1.0,
+      "completed_simulated_actions": 11,
+      "correct_action_coverage_on_eligible": 0.55,
+      "coverage": 0.34375,
+      "eligible_action_cases": 20,
+      "eligible_action_coverage": 0.55,
+      "end_to_end_latency": {
+        "count": 32,
+        "max_s": 0.6403339999997115,
+        "mean_s": 0.5464554531247927,
+        "p50_s": 0.5344149499997002,
+        "p95_s": 0.6355450999999448
+      },
+      "inference_loop_latency": {
+        "count": 32,
+        "max_s": 0.6409999999996217,
+        "mean_s": 0.5429687499998863,
+        "p50_s": 0.5310000000008586,
+        "p95_s": 0.6399999999994179
+      },
+      "policy_outcome_accuracy": 0.71875,
+      "proposal_accuracy_on_eligible": 0.6,
+      "proposal_correct_count": 12,
+      "proposal_coverage_on_eligible": 1.0,
+      "provider_status_counts": {
+        "ok": 32
+      },
+      "required_abstention_cases": 12,
+      "required_abstention_correct_count": 12,
+      "total_cases": 32,
+      "unexpected_abstention_count": 9
+    },
+    "heldout_default_policy_replay": {
+      "abstention_rate": 0.71875,
+      "accepted_action_accuracy": 1.0,
+      "accepted_correct_count": 9,
+      "accepted_count": 9,
+      "accepted_wrong_count": 0,
+      "baseline_decision_latency": {
+        "count": 32,
+        "max_s": 3.8800000766059384e-05,
+        "mean_s": 1.7171875128951797e-05,
+        "p50_s": 1.5300000086426735e-05,
+        "p95_s": 3.8300000596791506e-05
+      },
+      "baseline_outcome_accuracy": 1.0,
+      "correct_action_coverage_on_eligible": 0.45,
+      "coverage": 0.28125,
+      "eligible_action_cases": 20,
+      "eligible_action_coverage": 0.45,
+      "end_to_end_latency": {
+        "count": 32,
+        "max_s": 0.6403339999997115,
+        "mean_s": 0.5464554531247927,
+        "p50_s": 0.5344149499997002,
+        "p95_s": 0.6355450999999448
+      },
+      "inference_loop_latency": {
+        "count": 32,
+        "max_s": 0.6409999999996217,
+        "mean_s": 0.5429687499998863,
+        "p50_s": 0.5310000000008586,
+        "p95_s": 0.6399999999994179
+      },
+      "policy_outcome_accuracy": 0.65625,
+      "proposal_accuracy_on_eligible": 0.6,
+      "proposal_correct_count": 12,
+      "proposal_coverage_on_eligible": 1.0,
+      "provider_status_counts": {
+        "ok": 32
+      },
+      "required_abstention_cases": 12,
+      "required_abstention_correct_count": 12,
+      "total_cases": 32,
+      "unexpected_abstention_count": 11
+    },
+    "load_seconds": 9.629493399999774,
+    "model": {
+      "model": "AlexWortega/openjev/qwen3.5-4b-nli-v2",
+      "model_version": "552759daad712f1af6c4c13dabcb1e047886fc9c;max_len=2048;dtype=bfloat16;device=cuda",
+      "provider": "alexwortega-openjev",
+      "provider_version": "openjev-nli-adapter-v1",
+      "settings": {},
+      "synthetic": false
+    },
+    "peak_cuda_allocated_bytes": 9556560384,
+    "peak_cuda_reserved_bytes": 9726590976,
+    "scope": {
+      "actions": "bounded simulator only",
+      "calibration": "threshold selection on calibration split only; exploratory, not deployment validation",
+      "clock": "fixed per-case observation clock; real inference/deadline timing",
+      "comparison": "pinned 4B model versus deterministic state machine; 0.8B not run",
+      "energy": "unmeasured",
+      "latency": "load and warmup separate; end-to-end includes policy, simulator and record persistence",
+      "network": "HF offline flags and Python socket connections blocked; no downloads or installs",
+      "observations": "seeded synthetic structured scenarios; not recorded sensor data"
+    },
+    "seed": 20260927,
+    "selected_policy": {
+      "acceptance_threshold": 0.65,
+      "allowlist": [
+        "continue",
+        "inspect",
+        "recover",
+        "request_help"
+      ],
+      "conflict_tolerance_m": 0.4,
+      "minimum_battery_pct": 10.0,
+      "minimum_clearance_m": 0.5,
+      "minimum_margin": 0.05,
+      "required_units": {
+        "battery_pct": "%",
+        "camera_clearance_m": "m",
+        "front_range_m": "m",
+        "stuck": "bool"
+      },
+      "version": "robot-demo-policy-v1"
+    },
+    "started_at": "2026-09-27T16:58:38.889605+00:00"
+  },
+  "warmup": [
+    {
+      "end_to_end_s": 0.8680540000004839,
+      "inference_loop_s": 0.8590000000003783,
+      "provider_status": "ok",
+      "request_id": "r-afb8081b5bf7b2d010762949"
+    }
+  ]
+}

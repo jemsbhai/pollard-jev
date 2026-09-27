@@ -36,9 +36,11 @@ and dependency licenses remain separate from this companion's code.
 
 Normal tests inject an encoder with the verified method signature and exercise
 request serialization, label mapping, malformed outputs, and lazy loading.
-They do not load weights or demonstrate model quality. A real checkpoint has
-not been executed in this milestone. No latency, VRAM, energy, or robotics
-success claims follow from these mapping tests.
+They do not load weights or demonstrate model quality. Separately, the pinned
+4B checkpoint ran on Windows/CUDA on 2026-09-27 using the existing Shellhacks
+runtime/cache with no downloads or installs. See [the local benchmark](BENCHMARKING.md)
+for measured latency, GPU allocation, proposal errors, abstention and calibration
+results. Those synthetic cases do not establish physical success or energy savings.
 
 The adapter's synchronous encoder can continue computing after its caller is
 cancelled. The supervisor must disregard late results and own all dispatch;
@@ -46,10 +48,33 @@ the adapter itself has no actuator API. A production inference process should
 provide worker isolation and explicit cancellation or termination for resource
 reclamation.
 
-## Explicit setup for a later real-model run
+## Experimental input representations
 
-These optional PowerShell commands install model dependencies and download the
-selected checkpoint. They are separate from the offline milestone commands:
+The constructor and `from_local_cache` accept `representation="json-v1"`
+(the unchanged default), `"text-v1"` (the same facts as prose), or
+`"robot-rules-v1"` (facts plus fixed default-demo operating rules). The selected
+version is recorded in `identity.settings.input_representation` and is read-only
+after construction; create a new provider to select another representation.
+Score semantics and permitted action parameters remain unchanged.
+
+The rules variant is experimental and supplies additional task information.
+Its fixed 10% battery/0.5 m clearance rules do not follow custom `PolicyConfig`
+settings and do not encode the entire evidence policy. See the
+[paired experiment and limitations](REPRESENTATION_EXPERIMENT.md). No alternative
+has been promoted to the default.
+
+## Reuse an existing local installation
+
+Prefer the [offline benchmark command](BENCHMARKING.md#run-again-without-downloads)
+when the model and optional dependencies already exist in another environment.
+It uses that interpreter and cache directly without changing the other project.
+It never installs dependencies or downloads a missing checkpoint.
+
+## Optional setup for a new installation
+
+These commands install model dependencies and download the selected checkpoint.
+They are only for an explicitly requested new installation; do not use them
+for the existing local benchmark or under a no-download constraint:
 
 ```powershell
 .\.venv\Scripts\python.exe -m pip install -e ".[openjev]"
@@ -92,8 +117,9 @@ identity alongside the revision, dtype, and resolved device. Long-context
 adequacy, real model behavior, and cancellation of native compute still need
 benchmarking before deployment.
 
-The milestone environment audit found no OpenJev checkpoint in the configured
-Hugging Face cache and none of the optional model packages in the project venv.
-The factory tests use small local test doubles; they do not exercise Transformers
-loading or a CUDA kernel. Keep an environment lock and benchmark the real
-checkpoint before making deployment or memory claims.
+The initial milestone audit found no checkpoint in the default Hugging Face
+cache or optional model packages in this project's venv. The 2026-09-27 audit
+located both in Shellhacks and successfully reused them. The benchmark saves
+exact runtime versions and source/model hashes. The factory unit tests remain
+small local doubles; actual CUDA evidence is recorded separately in the
+benchmark report. No 0.8B checkpoint was found in the inspected local stores.

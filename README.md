@@ -205,19 +205,30 @@ exactly-once actuator infrastructure.
 
 ## Optional real backend and next milestone
 
-The implemented adapter targets the inspected `AlexWortega/openjev`
-`qwen3.5-4b-nli-v2` helper at a pinned commit. Its NLI request/result mapping and
-local-cache loader are tested with doubles. **No real model inference was run.**
-The default cache contains no selected checkpoint, and the project environment
-has no heavy model dependencies. See [OpenJev setup and evidence](https://github.com/jemsbhai/pollard-jev/blob/main/docs/openjev.md)
-for the optional dependency/download commands, API, licenses, and limitations.
+The implemented adapter targets `AlexWortega/openjev/qwen3.5-4b-nli-v2` at a
+pinned commit. **Real 4B inference was verified on Windows/CUDA on 2026-09-27**,
+reusing the existing Shellhacks environment and cache without any downloads or
+installs. The local runner records hashes and runtime versions, enforces offline
+loading, and rejects input truncation. See [OpenJev setup and evidence](https://github.com/jemsbhai/pollard-jev/blob/main/docs/openjev.md)
+and [benchmark method, command and results](https://github.com/jemsbhai/pollard-jev/blob/main/docs/BENCHMARKING.md).
 
-The next milestone is an explicit pinned real-model benchmark: validate the
-Windows/CUDA runtime, compare 0.8B and 4B candidates against the state machine
-on recorded/noisy scenarios, measure decision errors, abstention and end-to-end
-latency, and calibrate support thresholds on held-out data. Add process-level
-inference cancellation before device integration. Measure energy with an actual
-meter when available; keep TOML and other proxies separate from joules. Native
-sensor encoders, controller connections, and MCU deployment are later work.
+Across 32 held-out synthetic cases, model proposals matched 12 of 20 expected
+actions. Calibration-only threshold selection yielded 11 correct simulated
+actions, no incorrect accepted actions, and 21 abstentions, with a 0.534-second
+median end-to-end decision time. The state machine matched all expected outcomes;
+this run does not establish a model advantage. Package policy defaults are
+unchanged. Recorded-sensor validation and the 0.8B comparison remain outstanding.
+
+The [follow-up input experiment](https://github.com/jemsbhai/pollard-jev/blob/main/docs/REPRESENTATION_EXPERIMENT.md) tested factual
+text and fixed task-rule prompting. Plain text did not help on development cases.
+Rules improved fresh-test proposal accuracy from 60% to 67.5%, but obstacle,
+near-threshold and observation-order failures remain. Both candidates are opt-in;
+JSON remains the default. The state machine still matched all expected outcomes.
+
+Next: improve numerical/priority interpretation with new held-out validation
+and recorded sensor data. Add process-level inference cancellation before
+device integration. Measure energy with an actual meter when available; keep
+TOML and other proxies separate from joules. Native sensor encoders, controller
+connections, and MCU deployment are later work.
 
 See [implementation status](https://github.com/jemsbhai/pollard-jev/blob/main/docs/IMPLEMENTATION.md) for verified behavior and remaining limitations.
