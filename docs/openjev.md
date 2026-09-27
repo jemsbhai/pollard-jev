@@ -53,8 +53,9 @@ reclamation.
 The constructor and `from_local_cache` accept `representation="json-v1"`
 (the unchanged default), `"text-v1"` (the same facts as prose), or
 `"robot-rules-v1"` (facts plus fixed default-demo operating rules). The selected
-version is recorded in `identity.settings.input_representation`; score semantics
-and permitted action parameters remain unchanged.
+version is recorded in `identity.settings.input_representation` and is read-only
+after construction; create a new provider to select another representation.
+Score semantics and permitted action parameters remain unchanged.
 
 The rules variant is experimental and supplies additional task information.
 Its fixed 10% battery/0.5 m clearance rules do not follow custom `PolicyConfig`

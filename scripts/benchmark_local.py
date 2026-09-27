@@ -52,7 +52,11 @@ def save(path, value):
 
 
 def git_output(*args):
-    result = subprocess.run(["git", "-C", str(ROOT), *args], capture_output=True, text=True, check=False)
+    try:
+        result = subprocess.run(["git", "-C", str(ROOT), *args], capture_output=True, text=True, check=False)
+    except OSError:
+        # Git is optional provenance, including when running an extracted sdist.
+        return None
     return result.stdout.strip() if result.returncode == 0 else None
 
 

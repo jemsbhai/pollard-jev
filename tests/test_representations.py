@@ -8,6 +8,8 @@ import re
 import pytest
 
 from pollard_jev.contracts import ActionChoice, DecisionRequest, Observation
+from pollard_jev.demo import example_request
+from pollard_jev.loop import DecisionLoop
 from pollard_jev.providers.openjev import OpenJevProvider
 from pollard_jev.providers.representations import ROBOT_RULES, render_premise
 
@@ -152,6 +154,30 @@ def test_provider_identity_and_mapping_preserve_selected_representation(represen
 
 def test_default_provider_identity_records_legacy_representation():
     assert OpenJevProvider(CapturingEncoder(), synthetic=True).identity.settings == {"input_representation": "json-v1"}
+
+
+@pytest.mark.parametrize("representation", ["json-v1", "text-v1", "robot-rules-v1"])
+def test_representation_cannot_change_after_loop_captures_audit_identity(representation):
+    class CoherentEncoder(CapturingEncoder):
+        def predict_hypotheses(self, premise, hypotheses):
+            self.calls.append((premise, hypotheses))
+            return [[0.02, 0.96, 0.02]] + [[0.85, 0.10, 0.05] for _ in hypotheses[1:]]
+
+    encoder = CoherentEncoder()
+    provider = OpenJevProvider(encoder, synthetic=True, representation=representation)
+    sample = example_request(NOW)
+    replacement = "robot-rules-v1" if representation == "json-v1" else "json-v1"
+    with DecisionLoop(provider, clock=lambda: NOW) as loop:
+        with pytest.raises(AttributeError):
+            provider.representation = replacement
+        record = loop.decide(sample)
+
+    assert provider.representation == representation
+    assert record.provider_status == "ok"
+    assert record.policy.disposition == "accept"
+    assert record.provider_identity.settings["input_representation"] == representation
+    assert record.provider_result.identity == record.provider_identity == provider.identity
+    assert encoder.calls[0][0] == render_premise(sample, representation)
 
 
 @pytest.mark.parametrize("representation", ["", "future-v2", None, True])

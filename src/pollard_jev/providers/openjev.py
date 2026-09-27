@@ -48,7 +48,7 @@ class OpenJevProvider:
     ) -> None:
         if representation not in REPRESENTATIONS:
             raise ValueError(f"Unknown input representation: {representation!r}")
-        self.representation = representation
+        self._representation = representation
         self._encoder = encoder
         self.identity = ProviderIdentity(
             provider="alexwortega-openjev",
@@ -58,6 +58,11 @@ class OpenJevProvider:
             synthetic=synthetic,
             settings={"input_representation": representation},
         )
+
+    @property
+    def representation(self) -> str:
+        """Keep the rendered input format consistent with the audit identity."""
+        return self._representation
 
     @classmethod
     def from_local_cache(

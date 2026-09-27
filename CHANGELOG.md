@@ -12,6 +12,8 @@
   proposal errors, policy coverage, abstention, latency and state-machine comparison.
 - Local-only benchmark runner reusing an existing Python environment and pinned
   cache, with runtime/model/source provenance and input-truncation checks.
+- Input representation is read-only after construction to keep rendered inputs
+  consistent with audit identity; missing Git no longer blocks local benchmarks.
 - First real 4B CUDA run on 2026-09-27: 64 measured cases, 60% held-out proposal
   accuracy on action-eligible cases, 11 correct accepted actions and no wrong
   accepted actions. Full limitations and reproduction command in `docs/BENCHMARKING.md`.
