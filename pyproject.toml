@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "pollard-jev"
-version = "0.12"
+version = "0.13"
 description = "Typed, governed offline decisions for a robotics supervisor"
 readme = "README.md"
 license = "MIT"

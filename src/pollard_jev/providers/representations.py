@@ -6,7 +6,7 @@ import json
 
 from ..contracts import DecisionRequest
 
-REPRESENTATIONS = ("json-v1", "text-v1", "robot-rules-v1")
+REPRESENTATIONS = ("json-v1", "text-v1", "robot-rules-v1", "robot-rules-v2")
 # Experimental, fixed task context. These are the original robot demonstration
 # rules, supplied uniformly, never a computed per-request label or recommendation.
 # They do not automatically track a caller's custom PolicyConfig.
@@ -24,6 +24,21 @@ ROBOT_RULES = (
     "Unknown, conflicting or expired observations require withholding movement. "
     "Every observation below is reported separately; these rules do not establish that it is valid."
 )
+ROBOT_RULES_V2 = (
+    "Robot demonstration decision procedure for valid, coherent observations:\n"
+    "Compare numeric values, not their textual spelling. Below means strictly less than; "
+    "at least includes equality. Battery 9.99 percent is below 10; battery 10 percent is not. "
+    "Clearance 0.499 metres is below 0.5; clearance 0.5 metres is not.\n"
+    "Apply the first matching rule and stop. Later rules cannot override earlier rules.\n"
+    "1. If battery_pct < 10, request assistance, even when stuck or facing an obstacle.\n"
+    "2. Otherwise battery_pct >= 10. If stuck = 1, perform recovery, even when clearance is below 0.5.\n"
+    "3. Otherwise stuck = 0. If front_range_m < 0.5 OR camera_clearance_m < 0.5, "
+    "collect additional measurements before moving. Either reading below the boundary is enough.\n"
+    "4. Otherwise both clearances are >= 0.5, battery_pct >= 10 and stuck = 0: continue moving.\n"
+    "Observation order does not change rule priority. Do not replace a missing or unknown reading "
+    "with a number. Unknown, conflicting or expired observations require withholding movement. "
+    "These fixed task rules do not establish observation validity."
+)
 _FEATURE_NAMES = {
     "front_range_m": "Forward range",
     "camera_clearance_m": "Camera clearance",
@@ -38,7 +53,7 @@ def render_premise(request: DecisionRequest, representation: str = "json-v1") ->
     ``text-v1`` expands feature names, but does not calculate thresholds,
     freshness, feasibility or the preferred action. All readings remain separate.
     Values and metadata use JSON quoting to preserve arbitrary strings exactly.
-    ``robot-rules-v1`` additionally supplies fixed demonstration task rules. It
+    ``robot-rules-v1`` and ``robot-rules-v2`` supply fixed demonstration task rules. Each
     is an information intervention, not merely another serialization format.
     """
     if representation not in REPRESENTATIONS:
@@ -58,6 +73,8 @@ def render_premise(request: DecisionRequest, representation: str = "json-v1") ->
     ]
     if representation == "robot-rules-v1":
         lines.insert(0, ROBOT_RULES)
+    elif representation == "robot-rules-v2":
+        lines.insert(0, ROBOT_RULES_V2)
     for index, obs in enumerate(request.observations, 1):
         label = _FEATURE_NAMES.get(obs.feature, obs.feature)
         value = "null (unknown)" if obs.status == "unknown" else quote(obs.value)

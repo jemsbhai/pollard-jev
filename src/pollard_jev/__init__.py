@@ -1,3 +1,3 @@
 """Typed decisions with Pollard execution governance. Simulation only."""
 
-__version__ = "0.12"
+__version__ = "0.13"

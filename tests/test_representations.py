@@ -11,7 +11,7 @@ from pollard_jev.contracts import ActionChoice, DecisionRequest, Observation
 from pollard_jev.demo import example_request
 from pollard_jev.loop import DecisionLoop
 from pollard_jev.providers.openjev import OpenJevProvider
-from pollard_jev.providers.representations import ROBOT_RULES, render_premise
+from pollard_jev.providers.representations import ROBOT_RULES, ROBOT_RULES_V2, render_premise
 
 
 NOW = datetime(2026, 9, 27, 12, 34, 56, 123456, tzinfo=timezone(timedelta(hours=-4)))
@@ -132,7 +132,7 @@ def test_text_reports_facts_without_policy_adjectives_or_action_labels():
         assert choice.hypothesis not in text
 
 
-@pytest.mark.parametrize("representation", ["json-v1", "text-v1", "robot-rules-v1"])
+@pytest.mark.parametrize("representation", ["json-v1", "text-v1", "robot-rules-v1", "robot-rules-v2"])
 def test_provider_identity_and_mapping_preserve_selected_representation(representation):
     encoder = CapturingEncoder()
     provider = OpenJevProvider(encoder, synthetic=True, representation=representation)
@@ -156,7 +156,7 @@ def test_default_provider_identity_records_legacy_representation():
     assert OpenJevProvider(CapturingEncoder(), synthetic=True).identity.settings == {"input_representation": "json-v1"}
 
 
-@pytest.mark.parametrize("representation", ["json-v1", "text-v1", "robot-rules-v1"])
+@pytest.mark.parametrize("representation", ["json-v1", "text-v1", "robot-rules-v1", "robot-rules-v2"])
 def test_representation_cannot_change_after_loop_captures_audit_identity(representation):
     class CoherentEncoder(CapturingEncoder):
         def predict_hypotheses(self, premise, hypotheses):
@@ -207,7 +207,8 @@ def test_factory_rejects_invalid_representation_before_optional_import(monkeypat
     assert attempted == []
 
 
-def test_robot_rules_prefix_is_static_task_information_and_preserves_factual_suffix(monkeypatch):
+@pytest.mark.parametrize("representation,prefix", [("robot-rules-v1", ROBOT_RULES), ("robot-rules-v2", ROBOT_RULES_V2)])
+def test_robot_rules_prefix_is_static_task_information_and_preserves_factual_suffix(monkeypatch, representation, prefix):
     import pollard_jev.contracts as contracts
     import pollard_jev.policy as policy
     import pollard_jev.simulator as simulator
@@ -228,14 +229,25 @@ def test_robot_rules_prefix_is_static_task_information_and_preserves_factual_suf
     factual_parts = []
     for sample in samples:
         factual = render_premise(sample, "text-v1")
-        with_rules = render_premise(sample, "robot-rules-v1")
-        assert with_rules == ROBOT_RULES + "\n" + factual
-        assert with_rules.count(ROBOT_RULES) == 1
+        with_rules = render_premise(sample, representation)
+        assert with_rules == prefix + "\n" + factual
+        assert with_rules.count(prefix) == 1
         # The extra context describes the task uniformly, never a per-case answer.
         assert "Robot demonstration operating rules" not in factual
         assert sample.choices[0].hypothesis not in with_rules
         factual_parts.append(factual)
     assert len(set(factual_parts)) == len(samples)
+
+
+@pytest.mark.parametrize("battery,clearance", [(9.99, 0.499), (10.0, 0.5), (10.01, 0.501)])
+def test_v2_keeps_boundary_values_and_observation_order_without_annotations(battery, clearance):
+    readings = (observation("battery", "battery_pct", battery, unit="%"),
+                observation("range", value=clearance),
+                observation("stuck", "stuck", 1.0, unit="bool"))
+    for ordered in (readings, tuple(reversed(readings))):
+        sample = request(ordered)
+        assert render_premise(sample, "robot-rules-v2") == ROBOT_RULES_V2 + "\n" + render_premise(sample, "text-v1")
+        assert sample.observations == ordered
 
 
 def test_robot_rules_keep_original_numeric_boundaries_and_precedence():

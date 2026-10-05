@@ -53,14 +53,15 @@ reclamation.
 ## Experimental input representations
 
 The constructor and `from_local_cache` accept `representation="json-v1"`
-(the unchanged default), `"text-v1"` (the same facts as prose), or
-`"robot-rules-v1"` (facts plus fixed default-demo operating rules). The selected
+(the unchanged default), `"text-v1"` (the same facts as prose),
+`"robot-rules-v1"` (facts plus fixed default-demo operating rules), or
+`"robot-rules-v2"` (explicit numeric boundaries and action priority). The selected
 version is recorded in `identity.settings.input_representation` and is read-only
 after construction; create a new provider to select another representation.
 Score semantics and permitted action parameters remain unchanged.
 
-The rules variant is experimental and supplies additional task information.
-Its fixed 10% battery/0.5 m clearance rules do not follow custom `PolicyConfig`
+The rules variants are experimental and supply additional task information.
+Their fixed 10% battery/0.5 m clearance rules do not follow custom `PolicyConfig`
 settings and do not encode the entire evidence policy. See the
 [paired experiment and limitations](REPRESENTATION_EXPERIMENT.md). No alternative
 has been promoted to the default.

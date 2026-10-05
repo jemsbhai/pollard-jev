@@ -1,0 +1,1032 @@
+{
+  "artifact_sha256": {
+    "context-measurements.json": "b1a162b5f6472a048928ffcce0677665794cc6661db77ecd988cbcb627ff79b5",
+    "development-cases.json": "4c8e305cb78b3a4cfb55450c29f971f6a23dc3f65b2110d772b961b66c8c89db",
+    "environment.json": "0c3f88c3fbbf87a87848d9a846929224d0c5cac4cc0ca569ec1b7e191a408d5b",
+    "json-v1/development-ledger.db": "602450f8cf8ec30e9367e3bd82a6cfd89ae091784dfa45a91f8655eb1fed3ed2",
+    "json-v1/development-records.jsonl": "71f32ac305f83e451d197c61f222ad7111d0fc9fe5a092ae4d763696d94956bc",
+    "json-v1/development-run.json": "440f08f06183972d0439fb86f689a79d2d1a7e7a676fc7b8c2507422a5ecfc42",
+    "model-manifest.json": "5172053b3dd3bd99b22b3098f4fa6df9456e58a9855c2602a01a109f0be5fa99",
+    "protocol.json": "49b5c6a77cfa7bb7b038cebed4c4d0cafc8fd58d794d7f3fcf1e71676bdc5d54",
+    "robot-rules-v2/development-ledger.db": "bbb4580e168aee45969fca093be8da9359bb98d36380fab7e787ed440d1a6196",
+    "robot-rules-v2/development-records.jsonl": "2dff7f19f1c16b13463786228a8031ec78fa1b328a8deec22579e149100f585a",
+    "robot-rules-v2/development-run.json": "b5234a712f8e0d9bdf845c2f24c208ee737bdc1c9cc4fbb4a75ef6ac1f6f40d0",
+    "summary.json": "df2d7f073dc7a1b8596cf4052d3302d8290a972022ed85ce2381bb11417557c2"
+  },
+  "environment": {
+    "git_commit": "6da70c079b55750767c629cc36cbebe75e46a8f5",
+    "git_status": "M scripts/benchmark_local.py\n M scripts/compare_representations.py\n M src/pollard_jev/providers/representations.py\n M tests/test_representations.py",
+    "gpu": "NVIDIA GeForce RTX 4090 Laptop GPU",
+    "packages": {
+      "Jinja2": "3.1.6",
+      "MarkupSafe": "3.0.3",
+      "PyYAML": "6.0.3",
+      "Pygments": "2.21.0",
+      "annotated-doc": "0.0.5",
+      "annotated-types": "0.8.0",
+      "anyio": "4.15.1",
+      "bleak": "3.0.2",
+      "certifi": "2026.7.22",
+      "cffi": "2.1.1",
+      "charset-normalizer": "3.5.1",
+      "click": "8.5.0",
+      "colorama": "0.4.6",
+      "cryptography": "50.0.1",
+      "distro": "1.9.0",
+      "dnspython": "2.8.0",
+      "fastapi": "0.141.1",
+      "filelock": "4.0.4",
+      "fsspec": "2026.9.0",
+      "google-auth": "2.58.1",
+      "google-genai": "2.25.0",
+      "h11": "0.16.0",
+      "hf-xet": "1.6.0",
+      "httpcore": "1.0.9",
+      "httpx": "0.28.1",
+      "huggingface_hub": "1.33.0",
+      "idna": "3.20",
+      "iniconfig": "2.3.0",
+      "jsonalias": "0.1.1",
+      "markdown-it-py": "4.2.0",
+      "mdurl": "0.1.2",
+      "mpmath": "1.3.0",
+      "networkx": "3.7",
+      "numpy": "2.5.3",
+      "packaging": "26.3",
+      "pillow": "12.3.0",
+      "pip": "24.0",
+      "pluggy": "1.6.0",
+      "pollard": "1.6.0",
+      "pollard-jev": "0.1",
+      "psycopg": "3.3.6",
+      "psycopg-binary": "3.3.6",
+      "pyasn1": "0.6.4",
+      "pyasn1_modules": "0.4.2",
+      "pycparser": "3.0",
+      "pydantic": "2.13.5",
+      "pydantic_core": "2.46.5",
+      "pymongo": "4.15.1",
+      "pytest": "9.1.1",
+      "regex": "2026.9.10",
+      "relay-gateway": "0.1.0",
+      "requests": "2.34.2",
+      "rich": "15.0.0",
+      "safetensors": "0.8.0",
+      "setuptools": "81.0.0",
+      "shellingham": "1.5.4",
+      "sniffio": "1.3.1",
+      "solders": "0.29.0",
+      "starlette": "1.7.0",
+      "sympy": "1.14.0",
+      "tenacity": "9.1.4",
+      "tokenizers": "0.22.2",
+      "torch": "2.11.0+cu128",
+      "tqdm": "4.70.1",
+      "transformers": "5.15.0",
+      "typer": "0.27.2",
+      "typing-inspection": "0.4.4",
+      "typing_extensions": "4.16.0",
+      "tzdata": "2026.4",
+      "urllib3": "2.8.0",
+      "uvicorn": "0.54.0",
+      "websockets": "16.1.1",
+      "winrt-Windows.Devices.Bluetooth": "3.2.1",
+      "winrt-Windows.Devices.Bluetooth.Advertisement": "3.2.1",
+      "winrt-Windows.Devices.Bluetooth.GenericAttributeProfile": "3.2.1",
+      "winrt-Windows.Devices.Enumeration": "3.2.1",
+      "winrt-Windows.Devices.Radios": "3.2.1",
+      "winrt-Windows.Foundation": "3.2.1",
+      "winrt-Windows.Foundation.Collections": "3.2.1",
+      "winrt-Windows.Storage.Streams": "3.2.1",
+      "winrt-runtime": "3.2.1"
+    },
+    "platform": "Windows-11-10.0.26300-SP0",
+    "python": "3.12.2 (tags/v3.12.2:6abddd9, Feb  6 2024, 21:26:36) [MSC v.1937 64 bit (AMD64)]",
+    "source_sha256": {
+      "scripts/benchmark_local.py": "27c391f93dab214b7d69ba312f7013bb7893edfdc8a8431bd39b3cc4dda5c4ab",
+      "scripts/compare_representations.py": "2d5d80d8d0c75da24b98fe206256c832a01f7cce4694f08bde0582ffcb819685",
+      "src/pollard_jev/__init__.py": "434478b440bbfbfa720717dff4a23e3aefaa81aea905717f619c6285aa11de18",
+      "src/pollard_jev/__main__.py": "5bb72cb66b28fc9c3abcb6c4c4773c3fe0aad5e5e4b97a7e872f5f7463610be9",
+      "src/pollard_jev/benchmark.py": "184090fb630e08c9ce4bedd962afd243fbf55ded61cd8b7d6d60659eb9158b65",
+      "src/pollard_jev/benchmark_stress.py": "ee5dced77eaba5991c73c7e85b7f7be5872f7953472c5c0efd6e14c50509d6be",
+      "src/pollard_jev/contracts.py": "715e3c4d1a99f0f499e19c89e39520bb3a3c6fc01787652d419526687b0977f2",
+      "src/pollard_jev/demo.py": "3599dbd7f7c5afc833b0ad2a38bd94fc8d29643a5863b6012b87ff48f6061c17",
+      "src/pollard_jev/loop.py": "c45088e4d5d98d517f517f4dc75baf32a23e462230b2d901d905040b70392ab4",
+      "src/pollard_jev/policy.py": "6e59bea513ebb602e07eaa97e35e062b3487472361292f9b2ec4ba6b7bfa8f6d",
+      "src/pollard_jev/providers/__init__.py": "c6c501ca7be58a5a043d3dc92eb95760ac2f38d90d06b662ec2f9fc422c41628",
+      "src/pollard_jev/providers/base.py": "f0a920b86c2f235a9e6eb14162effab3969cf5c2a826371df405a942ed2167ef",
+      "src/pollard_jev/providers/context.py": "c7e7ccc39ac0e6e0adb8376c55798c2a15ce16a826d3754ea9f9a1e7dd2ad31b",
+      "src/pollard_jev/providers/fixture.py": "925e12fa7d8a7c326f8ce51b5a05ea7337855d34dc64c95ba01aee5c0c3e8ede",
+      "src/pollard_jev/providers/openjev.py": "6cdbcdd9e7865d85a343c72703fcd5a41bd3dc91e09cb0ca886d9f004524b8c4",
+      "src/pollard_jev/providers/representations.py": "145f3b50f237e3ec679ab27d309207ac616473fcaae86e157603338f30ba19ca",
+      "src/pollard_jev/records.py": "e9e894f3b5ad9e6ad5c58b7c6d7e5a88de15c08d6a12a0b46b9c38ec4ca579bb",
+      "src/pollard_jev/simulator.py": "4304afb78da64eb67a5d7c9b3d66ec0f3141b2075db13605d0b0c1ce37aec729"
+    },
+    "torch_cuda": "12.8"
+  },
+  "model_manifest": {
+    "checkpoint": "qwen3.5-4b-nli-v2",
+    "files": {
+      "modeling_openjev.py": {
+        "bytes": 13789,
+        "sha256": "071670d0879963ee69600ed31f0f3d5a37bee314461709477e8ac0e25f33fd97"
+      },
+      "qwen3.5-4b-nli-v2/config.json": {
+        "bytes": 3167,
+        "sha256": "477bed7614828c875db38b952835af9ca2fb5fa024af56cda8a708181db76a07"
+      },
+      "qwen3.5-4b-nli-v2/model.safetensors": {
+        "bytes": 9078635984,
+        "sha256": "f625c42c6bac1fbc03935f584d0126d096b6681bdc62d11f4a7c7f3b94bc35b3"
+      },
+      "qwen3.5-4b-nli-v2/tokenizer.json": {
+        "bytes": 19989325,
+        "sha256": "06b9509352d2af50381ab2247e083b80d32d5c0aba91c272ca9ff729b6a0e523"
+      },
+      "qwen3.5-4b-nli-v2/tokenizer_config.json": {
+        "bytes": 1125,
+        "sha256": "9cf04fffe3d8c3b85e439fb35c7acad0761ab51c422a8c4256d9f887c3a0be7d"
+      }
+    },
+    "repository": "AlexWortega/openjev",
+    "revision": "552759daad712f1af6c4c13dabcb1e047886fc9c"
+  },
+  "scope": "Previously inspected development cases only; no fresh evaluation or calibration selection",
+  "summary": {
+    "completed_at": "2026-10-05T16:55:10.456632+00:00",
+    "context_overflows": 0,
+    "development": {
+      "candidate": "robot-rules-v2",
+      "metrics": {
+        "json-v1": {
+          "abstention_rate": 0.78125,
+          "accepted_action_accuracy": 1.0,
+          "accepted_correct_count": 7,
+          "accepted_count": 7,
+          "accepted_wrong_count": 0,
+          "baseline_decision_latency": {
+            "count": 32,
+            "max_s": 2.5800021830946207e-05,
+            "mean_s": 1.2612503269338049e-05,
+            "p50_s": 1.2599979527294636e-05,
+            "p95_s": 1.899997005239129e-05
+          },
+          "baseline_outcome_accuracy": 1.0,
+          "completed_simulated_actions": 7,
+          "correct_action_coverage_on_eligible": 0.35,
+          "coverage": 0.21875,
+          "eligible_action_cases": 20,
+          "eligible_action_coverage": 0.35,
+          "end_to_end_latency": {
+            "count": 32,
+            "max_s": 0.5492904999991879,
+            "mean_s": 0.4556788999998389,
+            "p50_s": 0.44997820002026856,
+            "p95_s": 0.5358591999975033
+          },
+          "inference_loop_latency": {
+            "count": 32,
+            "max_s": 0.5459999999729916,
+            "mean_s": 0.4525625000005675,
+            "p50_s": 0.4380000000237487,
+            "p95_s": 0.5310000000172295
+          },
+          "policy_outcome_accuracy": 0.59375,
+          "proposal_accuracy_on_eligible": 0.6,
+          "proposal_correct_count": 12,
+          "proposal_coverage_on_eligible": 1.0,
+          "provider_status_counts": {
+            "ok": 32
+          },
+          "required_abstention_cases": 12,
+          "required_abstention_correct_count": 12,
+          "total_cases": 32,
+          "unexpected_abstention_count": 13
+        },
+        "robot-rules-v2": {
+          "abstention_rate": 0.6875,
+          "accepted_action_accuracy": 1.0,
+          "accepted_correct_count": 10,
+          "accepted_count": 10,
+          "accepted_wrong_count": 0,
+          "baseline_decision_latency": {
+            "count": 32,
+            "max_s": 2.629996743053198e-05,
+            "mean_s": 1.3615628631669097e-05,
+            "p50_s": 1.400001929141581e-05,
+            "p95_s": 2.2599997464567423e-05
+          },
+          "baseline_outcome_accuracy": 1.0,
+          "completed_simulated_actions": 10,
+          "correct_action_coverage_on_eligible": 0.5,
+          "coverage": 0.3125,
+          "eligible_action_cases": 20,
+          "eligible_action_coverage": 0.5,
+          "end_to_end_latency": {
+            "count": 32,
+            "max_s": 0.5886447000084445,
+            "mean_s": 0.48711293123960786,
+            "p50_s": 0.4789856499992311,
+            "p95_s": 0.5345522999996319
+          },
+          "inference_loop_latency": {
+            "count": 32,
+            "max_s": 0.5779999999795109,
+            "mean_s": 0.48484374999861757,
+            "p50_s": 0.48399999999674037,
+            "p95_s": 0.5470000000204891
+          },
+          "policy_outcome_accuracy": 0.6875,
+          "proposal_accuracy_on_eligible": 1.0,
+          "proposal_correct_count": 20,
+          "proposal_coverage_on_eligible": 1.0,
+          "provider_status_counts": {
+            "ok": 32
+          },
+          "required_abstention_cases": 12,
+          "required_abstention_correct_count": 12,
+          "total_cases": 32,
+          "unexpected_abstention_count": 10
+        }
+      },
+      "paired_proposal_counts_on_eligible": {
+        "both_correct": 12,
+        "both_wrong": 0,
+        "candidate_improves": 8,
+        "candidate_regresses": 0
+      },
+      "per_scenario": {
+        "json-v1": {
+          "clear": {
+            "abstention_rate": 0.5,
+            "accepted_action_accuracy": 1.0,
+            "accepted_correct_count": 2,
+            "accepted_count": 2,
+            "accepted_wrong_count": 0,
+            "baseline_decision_latency": {
+              "count": 4,
+              "max_s": 1.3999990187585354e-05,
+              "mean_s": 1.2899981811642647e-05,
+              "p50_s": 1.279998105019331e-05,
+              "p95_s": 1.3999990187585354e-05
+            },
+            "baseline_outcome_accuracy": 1.0,
+            "completed_simulated_actions": 2,
+            "correct_action_coverage_on_eligible": 0.5,
+            "coverage": 0.5,
+            "eligible_action_cases": 4,
+            "eligible_action_coverage": 0.5,
+            "end_to_end_latency": {
+              "count": 4,
+              "max_s": 0.46671900001820177,
+              "mean_s": 0.44605815001705196,
+              "p50_s": 0.4427221000078134,
+              "p95_s": 0.46671900001820177
+            },
+            "inference_loop_latency": {
+              "count": 4,
+              "max_s": 0.4690000000409782,
+              "mean_s": 0.4412500000180444,
+              "p50_s": 0.4370000000053551,
+              "p95_s": 0.4690000000409782
+            },
+            "policy_outcome_accuracy": 0.5,
+            "proposal_accuracy_on_eligible": 1.0,
+            "proposal_correct_count": 4,
+            "proposal_coverage_on_eligible": 1.0,
+            "provider_status_counts": {
+              "ok": 4
+            },
+            "required_abstention_cases": 0,
+            "required_abstention_correct_count": 0,
+            "total_cases": 4,
+            "unexpected_abstention_count": 2
+          },
+          "conflicting": {
+            "abstention_rate": 1.0,
+            "accepted_action_accuracy": null,
+            "accepted_correct_count": 0,
+            "accepted_count": 0,
+            "accepted_wrong_count": 0,
+            "baseline_decision_latency": {
+              "count": 4,
+              "max_s": 1.5199999324977398e-05,
+              "mean_s": 1.2500007869675756e-05,
+              "p50_s": 1.2200005585327744e-05,
+              "p95_s": 1.5199999324977398e-05
+            },
+            "baseline_outcome_accuracy": 1.0,
+            "completed_simulated_actions": 0,
+            "correct_action_coverage_on_eligible": null,
+            "coverage": 0.0,
+            "eligible_action_cases": 0,
+            "eligible_action_coverage": null,
+            "end_to_end_latency": {
+              "count": 4,
+              "max_s": 0.46072440000716597,
+              "mean_s": 0.45067937501880806,
+              "p50_s": 0.4522856500116177,
+              "p95_s": 0.46072440000716597
+            },
+            "inference_loop_latency": {
+              "count": 4,
+              "max_s": 0.45300000003771856,
+              "mean_s": 0.4452500000334112,
+              "p50_s": 0.44550000003073364,
+              "p95_s": 0.45300000003771856
+            },
+            "policy_outcome_accuracy": 1.0,
+            "proposal_accuracy_on_eligible": null,
+            "proposal_correct_count": 0,
+            "proposal_coverage_on_eligible": null,
+            "provider_status_counts": {
+              "ok": 4
+            },
+            "required_abstention_cases": 4,
+            "required_abstention_correct_count": 4,
+            "total_cases": 4,
+            "unexpected_abstention_count": 0
+          },
+          "low_battery": {
+            "abstention_rate": 1.0,
+            "accepted_action_accuracy": null,
+            "accepted_correct_count": 0,
+            "accepted_count": 0,
+            "accepted_wrong_count": 0,
+            "baseline_decision_latency": {
+              "count": 4,
+              "max_s": 1.6300007700920105e-05,
+              "mean_s": 1.440000778529793e-05,
+              "p50_s": 1.4499993994832039e-05,
+              "p95_s": 1.6300007700920105e-05
+            },
+            "baseline_outcome_accuracy": 1.0,
+            "completed_simulated_actions": 0,
+            "correct_action_coverage_on_eligible": 0.0,
+            "coverage": 0.0,
+            "eligible_action_cases": 4,
+            "eligible_action_coverage": 0.0,
+            "end_to_end_latency": {
+              "count": 4,
+              "max_s": 0.4518614999833517,
+              "mean_s": 0.44653575000120327,
+              "p50_s": 0.446352900005877,
+              "p95_s": 0.4518614999833517
+            },
+            "inference_loop_latency": {
+              "count": 4,
+              "max_s": 0.45300000003771856,
+              "mean_s": 0.44124999998894054,
+              "p50_s": 0.43749999997089617,
+              "p95_s": 0.45300000003771856
+            },
+            "policy_outcome_accuracy": 0.0,
+            "proposal_accuracy_on_eligible": 0.0,
+            "proposal_correct_count": 0,
+            "proposal_coverage_on_eligible": 1.0,
+            "provider_status_counts": {
+              "ok": 4
+            },
+            "required_abstention_cases": 0,
+            "required_abstention_correct_count": 0,
+            "total_cases": 4,
+            "unexpected_abstention_count": 4
+          },
+          "missing": {
+            "abstention_rate": 1.0,
+            "accepted_action_accuracy": null,
+            "accepted_correct_count": 0,
+            "accepted_count": 0,
+            "accepted_wrong_count": 0,
+            "baseline_decision_latency": {
+              "count": 4,
+              "max_s": 1.0100018698722124e-05,
+              "mean_s": 9.72501584328711e-06,
+              "p50_s": 9.90001717582345e-06,
+              "p95_s": 1.0100018698722124e-05
+            },
+            "baseline_outcome_accuracy": 1.0,
+            "completed_simulated_actions": 0,
+            "correct_action_coverage_on_eligible": null,
+            "coverage": 0.0,
+            "eligible_action_cases": 0,
+            "eligible_action_coverage": null,
+            "end_to_end_latency": {
+              "count": 4,
+              "max_s": 0.4337820999789983,
+              "mean_s": 0.4236407999851508,
+              "p50_s": 0.42137909997836687,
+              "p95_s": 0.4337820999789983
+            },
+            "inference_loop_latency": {
+              "count": 4,
+              "max_s": 0.4380000000237487,
+              "mean_s": 0.4259999999922002,
+              "p50_s": 0.42199999999138527,
+              "p95_s": 0.4380000000237487
+            },
+            "policy_outcome_accuracy": 1.0,
+            "proposal_accuracy_on_eligible": null,
+            "proposal_correct_count": 0,
+            "proposal_coverage_on_eligible": null,
+            "provider_status_counts": {
+              "ok": 4
+            },
+            "required_abstention_cases": 4,
+            "required_abstention_correct_count": 4,
+            "total_cases": 4,
+            "unexpected_abstention_count": 0
+          },
+          "noisy_coherent": {
+            "abstention_rate": 0.5,
+            "accepted_action_accuracy": 1.0,
+            "accepted_correct_count": 2,
+            "accepted_count": 2,
+            "accepted_wrong_count": 0,
+            "baseline_decision_latency": {
+              "count": 4,
+              "max_s": 1.580000389367342e-05,
+              "mean_s": 1.4325007214210927e-05,
+              "p50_s": 1.4649995137006044e-05,
+              "p95_s": 1.580000389367342e-05
+            },
+            "baseline_outcome_accuracy": 1.0,
+            "completed_simulated_actions": 2,
+            "correct_action_coverage_on_eligible": 0.5,
+            "coverage": 0.5,
+            "eligible_action_cases": 4,
+            "eligible_action_coverage": 0.5,
+            "end_to_end_latency": {
+              "count": 4,
+              "max_s": 0.5492904999991879,
+              "mean_s": 0.4814906499959761,
+              "p50_s": 0.46975999997812323,
+              "p95_s": 0.5492904999991879
+            },
+            "inference_loop_latency": {
+              "count": 4,
+              "max_s": 0.5459999999729916,
+              "mean_s": 0.4762499999778811,
+              "p50_s": 0.4604999999864958,
+              "p95_s": 0.5459999999729916
+            },
+            "policy_outcome_accuracy": 0.5,
+            "proposal_accuracy_on_eligible": 1.0,
+            "proposal_correct_count": 4,
+            "proposal_coverage_on_eligible": 1.0,
+            "provider_status_counts": {
+              "ok": 4
+            },
+            "required_abstention_cases": 0,
+            "required_abstention_correct_count": 0,
+            "total_cases": 4,
+            "unexpected_abstention_count": 2
+          },
+          "obstacle": {
+            "abstention_rate": 1.0,
+            "accepted_action_accuracy": null,
+            "accepted_correct_count": 0,
+            "accepted_count": 0,
+            "accepted_wrong_count": 0,
+            "baseline_decision_latency": {
+              "count": 4,
+              "max_s": 2.5800021830946207e-05,
+              "mean_s": 1.6875012079253793e-05,
+              "p50_s": 1.4250021195039153e-05,
+              "p95_s": 2.5800021830946207e-05
+            },
+            "baseline_outcome_accuracy": 1.0,
+            "completed_simulated_actions": 0,
+            "correct_action_coverage_on_eligible": 0.0,
+            "coverage": 0.0,
+            "eligible_action_cases": 4,
+            "eligible_action_coverage": 0.0,
+            "end_to_end_latency": {
+              "count": 4,
+              "max_s": 0.45828560000518337,
+              "mean_s": 0.447982174999197,
+              "p50_s": 0.4526207000017166,
+              "p95_s": 0.45828560000518337
+            },
+            "inference_loop_latency": {
+              "count": 4,
+              "max_s": 0.45300000003771856,
+              "mean_s": 0.44524999998975545,
+              "p50_s": 0.445499999972526,
+              "p95_s": 0.45300000003771856
+            },
+            "policy_outcome_accuracy": 0.0,
+            "proposal_accuracy_on_eligible": 0.0,
+            "proposal_correct_count": 0,
+            "proposal_coverage_on_eligible": 1.0,
+            "provider_status_counts": {
+              "ok": 4
+            },
+            "required_abstention_cases": 0,
+            "required_abstention_correct_count": 0,
+            "total_cases": 4,
+            "unexpected_abstention_count": 4
+          },
+          "stale": {
+            "abstention_rate": 1.0,
+            "accepted_action_accuracy": null,
+            "accepted_correct_count": 0,
+            "accepted_count": 0,
+            "accepted_wrong_count": 0,
+            "baseline_decision_latency": {
+              "count": 4,
+              "max_s": 4.900037311017513e-06,
+              "mean_s": 4.5000051613897085e-06,
+              "p50_s": 4.5000051613897085e-06,
+              "p95_s": 4.900037311017513e-06
+            },
+            "baseline_outcome_accuracy": 1.0,
+            "completed_simulated_actions": 0,
+            "correct_action_coverage_on_eligible": null,
+            "coverage": 0.0,
+            "eligible_action_cases": 0,
+            "eligible_action_coverage": null,
+            "end_to_end_latency": {
+              "count": 4,
+              "max_s": 0.5222589999902993,
+              "mean_s": 0.4675935749983182,
+              "p50_s": 0.4587580499937758,
+              "p95_s": 0.5222589999902993
+            },
+            "inference_loop_latency": {
+              "count": 4,
+              "max_s": 0.5309999999590218,
+              "mean_s": 0.4647499999991851,
+              "p50_s": 0.45300000000861473,
+              "p95_s": 0.5309999999590218
+            },
+            "policy_outcome_accuracy": 1.0,
+            "proposal_accuracy_on_eligible": null,
+            "proposal_correct_count": 0,
+            "proposal_coverage_on_eligible": null,
+            "provider_status_counts": {
+              "ok": 4
+            },
+            "required_abstention_cases": 4,
+            "required_abstention_correct_count": 4,
+            "total_cases": 4,
+            "unexpected_abstention_count": 0
+          },
+          "stuck": {
+            "abstention_rate": 0.25,
+            "accepted_action_accuracy": 1.0,
+            "accepted_correct_count": 3,
+            "accepted_count": 3,
+            "accepted_wrong_count": 0,
+            "baseline_decision_latency": {
+              "count": 4,
+              "max_s": 1.899997005239129e-05,
+              "mean_s": 1.567498838994652e-05,
+              "p50_s": 1.585000427439809e-05,
+              "p95_s": 1.899997005239129e-05
+            },
+            "baseline_outcome_accuracy": 1.0,
+            "completed_simulated_actions": 3,
+            "correct_action_coverage_on_eligible": 0.75,
+            "coverage": 0.75,
+            "eligible_action_cases": 4,
+            "eligible_action_coverage": 0.75,
+            "end_to_end_latency": {
+              "count": 4,
+              "max_s": 0.5358591999975033,
+              "mean_s": 0.4814507249830058,
+              "p50_s": 0.4752405999752227,
+              "p95_s": 0.5358591999975033
+            },
+            "inference_loop_latency": {
+              "count": 4,
+              "max_s": 0.5310000000172295,
+              "mean_s": 0.4805000000051223,
+              "p50_s": 0.47649999998975545,
+              "p95_s": 0.5310000000172295
+            },
+            "policy_outcome_accuracy": 0.75,
+            "proposal_accuracy_on_eligible": 1.0,
+            "proposal_correct_count": 4,
+            "proposal_coverage_on_eligible": 1.0,
+            "provider_status_counts": {
+              "ok": 4
+            },
+            "required_abstention_cases": 0,
+            "required_abstention_correct_count": 0,
+            "total_cases": 4,
+            "unexpected_abstention_count": 1
+          }
+        },
+        "robot-rules-v2": {
+          "clear": {
+            "abstention_rate": 0.0,
+            "accepted_action_accuracy": 1.0,
+            "accepted_correct_count": 4,
+            "accepted_count": 4,
+            "accepted_wrong_count": 0,
+            "baseline_decision_latency": {
+              "count": 4,
+              "max_s": 2.629996743053198e-05,
+              "mean_s": 1.759998849593103e-05,
+              "p50_s": 1.4849996659904718e-05,
+              "p95_s": 2.629996743053198e-05
+            },
+            "baseline_outcome_accuracy": 1.0,
+            "completed_simulated_actions": 4,
+            "correct_action_coverage_on_eligible": 1.0,
+            "coverage": 1.0,
+            "eligible_action_cases": 4,
+            "eligible_action_coverage": 1.0,
+            "end_to_end_latency": {
+              "count": 4,
+              "max_s": 0.48225199995795265,
+              "mean_s": 0.477154674983467,
+              "p50_s": 0.47854245000053197,
+              "p95_s": 0.48225199995795265
+            },
+            "inference_loop_latency": {
+              "count": 4,
+              "max_s": 0.4850000000442378,
+              "mean_s": 0.47650000000430737,
+              "p50_s": 0.47649999998975545,
+              "p95_s": 0.4850000000442378
+            },
+            "policy_outcome_accuracy": 1.0,
+            "proposal_accuracy_on_eligible": 1.0,
+            "proposal_correct_count": 4,
+            "proposal_coverage_on_eligible": 1.0,
+            "provider_status_counts": {
+              "ok": 4
+            },
+            "required_abstention_cases": 0,
+            "required_abstention_correct_count": 0,
+            "total_cases": 4,
+            "unexpected_abstention_count": 0
+          },
+          "conflicting": {
+            "abstention_rate": 1.0,
+            "accepted_action_accuracy": null,
+            "accepted_correct_count": 0,
+            "accepted_count": 0,
+            "accepted_wrong_count": 0,
+            "baseline_decision_latency": {
+              "count": 4,
+              "max_s": 1.4199991710484028e-05,
+              "mean_s": 1.3149998267181218e-05,
+              "p50_s": 1.3449985999614e-05,
+              "p95_s": 1.4199991710484028e-05
+            },
+            "baseline_outcome_accuracy": 1.0,
+            "completed_simulated_actions": 0,
+            "correct_action_coverage_on_eligible": null,
+            "coverage": 0.0,
+            "eligible_action_cases": 0,
+            "eligible_action_coverage": null,
+            "end_to_end_latency": {
+              "count": 4,
+              "max_s": 0.4918173999758437,
+              "mean_s": 0.4790950999886263,
+              "p50_s": 0.4839124999998603,
+              "p95_s": 0.4918173999758437
+            },
+            "inference_loop_latency": {
+              "count": 4,
+              "max_s": 0.5,
+              "mean_s": 0.4802499999932479,
+              "p50_s": 0.48399999999674037,
+              "p95_s": 0.5
+            },
+            "policy_outcome_accuracy": 1.0,
+            "proposal_accuracy_on_eligible": null,
+            "proposal_correct_count": 0,
+            "proposal_coverage_on_eligible": null,
+            "provider_status_counts": {
+              "ok": 4
+            },
+            "required_abstention_cases": 4,
+            "required_abstention_correct_count": 4,
+            "total_cases": 4,
+            "unexpected_abstention_count": 0
+          },
+          "low_battery": {
+            "abstention_rate": 0.25,
+            "accepted_action_accuracy": 1.0,
+            "accepted_correct_count": 3,
+            "accepted_count": 3,
+            "accepted_wrong_count": 0,
+            "baseline_decision_latency": {
+              "count": 4,
+              "max_s": 1.7900019884109497e-05,
+              "mean_s": 1.5300014638341963e-05,
+              "p50_s": 1.470002462156117e-05,
+              "p95_s": 1.7900019884109497e-05
+            },
+            "baseline_outcome_accuracy": 1.0,
+            "completed_simulated_actions": 3,
+            "correct_action_coverage_on_eligible": 0.75,
+            "coverage": 0.75,
+            "eligible_action_cases": 4,
+            "eligible_action_coverage": 0.75,
+            "end_to_end_latency": {
+              "count": 4,
+              "max_s": 0.5111573999747634,
+              "mean_s": 0.49296382498869207,
+              "p50_s": 0.4971221500018146,
+              "p95_s": 0.5111573999747634
+            },
+            "inference_loop_latency": {
+              "count": 4,
+              "max_s": 0.5,
+              "mean_s": 0.4842499999940628,
+              "p50_s": 0.4919999999983702,
+              "p95_s": 0.5
+            },
+            "policy_outcome_accuracy": 0.75,
+            "proposal_accuracy_on_eligible": 1.0,
+            "proposal_correct_count": 4,
+            "proposal_coverage_on_eligible": 1.0,
+            "provider_status_counts": {
+              "ok": 4
+            },
+            "required_abstention_cases": 0,
+            "required_abstention_correct_count": 0,
+            "total_cases": 4,
+            "unexpected_abstention_count": 1
+          },
+          "missing": {
+            "abstention_rate": 1.0,
+            "accepted_action_accuracy": null,
+            "accepted_correct_count": 0,
+            "accepted_count": 0,
+            "accepted_wrong_count": 0,
+            "baseline_decision_latency": {
+              "count": 4,
+              "max_s": 2.2599997464567423e-05,
+              "mean_s": 1.4625024050474167e-05,
+              "p50_s": 1.2300035450607538e-05,
+              "p95_s": 2.2599997464567423e-05
+            },
+            "baseline_outcome_accuracy": 1.0,
+            "completed_simulated_actions": 0,
+            "correct_action_coverage_on_eligible": null,
+            "coverage": 0.0,
+            "eligible_action_cases": 0,
+            "eligible_action_coverage": null,
+            "end_to_end_latency": {
+              "count": 4,
+              "max_s": 0.470883599948138,
+              "mean_s": 0.46312562498496845,
+              "p50_s": 0.4651552499854006,
+              "p95_s": 0.470883599948138
+            },
+            "inference_loop_latency": {
+              "count": 4,
+              "max_s": 0.48399999999674037,
+              "mean_s": 0.46875,
+              "p50_s": 0.46900000001187436,
+              "p95_s": 0.48399999999674037
+            },
+            "policy_outcome_accuracy": 1.0,
+            "proposal_accuracy_on_eligible": null,
+            "proposal_correct_count": 0,
+            "proposal_coverage_on_eligible": null,
+            "provider_status_counts": {
+              "ok": 4
+            },
+            "required_abstention_cases": 4,
+            "required_abstention_correct_count": 4,
+            "total_cases": 4,
+            "unexpected_abstention_count": 0
+          },
+          "noisy_coherent": {
+            "abstention_rate": 0.25,
+            "accepted_action_accuracy": 1.0,
+            "accepted_correct_count": 3,
+            "accepted_count": 3,
+            "accepted_wrong_count": 0,
+            "baseline_decision_latency": {
+              "count": 4,
+              "max_s": 1.4700053725391626e-05,
+              "mean_s": 1.392500416841358e-05,
+              "p50_s": 1.4049990568310022e-05,
+              "p95_s": 1.4700053725391626e-05
+            },
+            "baseline_outcome_accuracy": 1.0,
+            "completed_simulated_actions": 3,
+            "correct_action_coverage_on_eligible": 0.75,
+            "coverage": 0.75,
+            "eligible_action_cases": 4,
+            "eligible_action_coverage": 0.75,
+            "end_to_end_latency": {
+              "count": 4,
+              "max_s": 0.5886447000084445,
+              "mean_s": 0.5022726250026608,
+              "p50_s": 0.47630234999815,
+              "p95_s": 0.5886447000084445
+            },
+            "inference_loop_latency": {
+              "count": 4,
+              "max_s": 0.5779999999795109,
+              "mean_s": 0.4959999999991851,
+              "p50_s": 0.47599999999511056,
+              "p95_s": 0.5779999999795109
+            },
+            "policy_outcome_accuracy": 0.75,
+            "proposal_accuracy_on_eligible": 1.0,
+            "proposal_correct_count": 4,
+            "proposal_coverage_on_eligible": 1.0,
+            "provider_status_counts": {
+              "ok": 4
+            },
+            "required_abstention_cases": 0,
+            "required_abstention_correct_count": 0,
+            "total_cases": 4,
+            "unexpected_abstention_count": 1
+          },
+          "obstacle": {
+            "abstention_rate": 1.0,
+            "accepted_action_accuracy": null,
+            "accepted_correct_count": 0,
+            "accepted_count": 0,
+            "accepted_wrong_count": 0,
+            "baseline_decision_latency": {
+              "count": 4,
+              "max_s": 1.5300000086426735e-05,
+              "mean_s": 1.375000283587724e-05,
+              "p50_s": 1.3800017768517137e-05,
+              "p95_s": 1.5300000086426735e-05
+            },
+            "baseline_outcome_accuracy": 1.0,
+            "completed_simulated_actions": 0,
+            "correct_action_coverage_on_eligible": 0.0,
+            "coverage": 0.0,
+            "eligible_action_cases": 4,
+            "eligible_action_coverage": 0.0,
+            "end_to_end_latency": {
+              "count": 4,
+              "max_s": 0.5061201999778859,
+              "mean_s": 0.4804995749873342,
+              "p50_s": 0.475069549982436,
+              "p95_s": 0.5061201999778859
+            },
+            "inference_loop_latency": {
+              "count": 4,
+              "max_s": 0.5,
+              "mean_s": 0.48049999999057036,
+              "p50_s": 0.47649999998975545,
+              "p95_s": 0.5
+            },
+            "policy_outcome_accuracy": 0.0,
+            "proposal_accuracy_on_eligible": 1.0,
+            "proposal_correct_count": 4,
+            "proposal_coverage_on_eligible": 1.0,
+            "provider_status_counts": {
+              "ok": 4
+            },
+            "required_abstention_cases": 0,
+            "required_abstention_correct_count": 0,
+            "total_cases": 4,
+            "unexpected_abstention_count": 4
+          },
+          "stale": {
+            "abstention_rate": 1.0,
+            "accepted_action_accuracy": null,
+            "accepted_correct_count": 0,
+            "accepted_count": 0,
+            "accepted_wrong_count": 0,
+            "baseline_decision_latency": {
+              "count": 4,
+              "max_s": 5.00003807246685e-06,
+              "mean_s": 4.649991751648486e-06,
+              "p50_s": 4.699977580457926e-06,
+              "p95_s": 5.00003807246685e-06
+            },
+            "baseline_outcome_accuracy": 1.0,
+            "completed_simulated_actions": 0,
+            "correct_action_coverage_on_eligible": null,
+            "coverage": 0.0,
+            "eligible_action_cases": 0,
+            "eligible_action_coverage": null,
+            "end_to_end_latency": {
+              "count": 4,
+              "max_s": 0.5345522999996319,
+              "mean_s": 0.5032131749758264,
+              "p50_s": 0.5026071999745909,
+              "p95_s": 0.5345522999996319
+            },
+            "inference_loop_latency": {
+              "count": 4,
+              "max_s": 0.5470000000204891,
+              "mean_s": 0.5,
+              "p50_s": 0.4919999999983702,
+              "p95_s": 0.5470000000204891
+            },
+            "policy_outcome_accuracy": 1.0,
+            "proposal_accuracy_on_eligible": null,
+            "proposal_correct_count": 0,
+            "proposal_coverage_on_eligible": null,
+            "provider_status_counts": {
+              "ok": 4
+            },
+            "required_abstention_cases": 4,
+            "required_abstention_correct_count": 4,
+            "total_cases": 4,
+            "unexpected_abstention_count": 0
+          },
+          "stuck": {
+            "abstention_rate": 1.0,
+            "accepted_action_accuracy": null,
+            "accepted_correct_count": 0,
+            "accepted_count": 0,
+            "accepted_wrong_count": 0,
+            "baseline_decision_latency": {
+              "count": 4,
+              "max_s": 1.850002445280552e-05,
+              "mean_s": 1.592500484548509e-05,
+              "p50_s": 1.645000884309411e-05,
+              "p95_s": 1.850002445280552e-05
+            },
+            "baseline_outcome_accuracy": 1.0,
+            "completed_simulated_actions": 0,
+            "correct_action_coverage_on_eligible": 0.0,
+            "coverage": 0.0,
+            "eligible_action_cases": 4,
+            "eligible_action_coverage": 0.0,
+            "end_to_end_latency": {
+              "count": 4,
+              "max_s": 0.5126828000065871,
+              "mean_s": 0.4985788500052877,
+              "p50_s": 0.5015225500101224,
+              "p95_s": 0.5126828000065871
+            },
+            "inference_loop_latency": {
+              "count": 4,
+              "max_s": 0.5,
+              "mean_s": 0.492500000007567,
+              "p50_s": 0.4925000000221189,
+              "p95_s": 0.5
+            },
+            "policy_outcome_accuracy": 0.0,
+            "proposal_accuracy_on_eligible": 1.0,
+            "proposal_correct_count": 4,
+            "proposal_coverage_on_eligible": 1.0,
+            "provider_status_counts": {
+              "ok": 4
+            },
+            "required_abstention_cases": 0,
+            "required_abstention_correct_count": 0,
+            "total_cases": 4,
+            "unexpected_abstention_count": 4
+          }
+        }
+      }
+    },
+    "encoder_forward_attempts": 66,
+    "load_seconds": 18.67603439994855,
+    "max_pair_tokens": 850,
+    "peak_cuda_allocated_bytes": 9589748224,
+    "peak_cuda_reserved_bytes": 9785311232,
+    "protocol": {
+      "candidate_information": "Fixed demo task rules plus factual readings",
+      "cases_per_scenario_per_evaluation_split": 8,
+      "created_at": "2026-10-05T16:54:11.615149+00:00",
+      "default": "json-v1 and package policy defaults remain unchanged",
+      "development": "Original seed 20260927 calibration cases only; already observed exploratory data",
+      "evaluation_seed": 20260928,
+      "execution": "Identical requests; alternating representation order per case; shared weights and guarded encoder",
+      "representation_source_sha256": "145f3b50f237e3ec679ab27d309207ac616473fcaae86e157603338f30ba19ca",
+      "representations": [
+        "json-v1",
+        "robot-rules-v2"
+      ],
+      "runner_source_sha256": "2d5d80d8d0c75da24b98fe206256c832a01f7cce4694f08bde0582ffcb819685",
+      "scope": "Synthetic templates, fixed evidence clock, simulated dispatch; not physical or recorded-sensor validation",
+      "selection": "Same predefined calibration grid, separately per representation; no held-out tuning",
+      "stage": "development",
+      "stress_seed": 20260929
+    },
+    "providers": {
+      "json-v1": {
+        "model": "AlexWortega/openjev/qwen3.5-4b-nli-v2",
+        "model_version": "552759daad712f1af6c4c13dabcb1e047886fc9c;max_len=2048;dtype=bfloat16;device=cuda",
+        "provider": "alexwortega-openjev",
+        "provider_version": "openjev-nli-adapter-v1",
+        "settings": {
+          "input_representation": "json-v1"
+        },
+        "synthetic": false
+      },
+      "robot-rules-v2": {
+        "model": "AlexWortega/openjev/qwen3.5-4b-nli-v2",
+        "model_version": "552759daad712f1af6c4c13dabcb1e047886fc9c;max_len=2048;dtype=bfloat16;device=cuda",
+        "provider": "alexwortega-openjev",
+        "provider_version": "openjev-nli-adapter-v1",
+        "settings": {
+          "input_representation": "robot-rules-v2"
+        },
+        "synthetic": false
+      }
+    }
+  }
+}

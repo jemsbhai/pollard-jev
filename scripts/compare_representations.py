@@ -85,8 +85,10 @@ def main(argv=None):
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--stage", choices=("development", "evaluation"), required=True)
     parser.add_argument("--cases-per-scenario", type=int, default=8)
-    parser.add_argument("--candidate", choices=("text-v1", "robot-rules-v1"), default="text-v1")
+    parser.add_argument("--candidate", choices=("text-v1", "robot-rules-v1", "robot-rules-v2"), default="text-v1")
     args = parser.parse_args(argv)
+    if args.candidate == "robot-rules-v2" and args.stage == "evaluation":
+        parser.error("robot-rules-v2 is development-only here; evaluation requires fresh reserved seeds and a frozen protocol")
     if not args.cache_dir.is_dir():
         parser.error("cache must already exist; this command never downloads")
     if args.output.exists() and (not args.output.is_dir() or any(args.output.iterdir())):
@@ -106,7 +108,7 @@ def main(argv=None):
     protocol = {
         "created_at": datetime.now(timezone.utc).isoformat(), "stage": args.stage,
         "representations": ["json-v1", args.candidate],
-        "candidate_information": "Fixed demo task rules plus factual readings" if args.candidate == "robot-rules-v1" else "Same readings as factual prose; no task rules added",
+        "candidate_information": "Fixed demo task rules plus factual readings" if args.candidate.startswith("robot-rules-") else "Same readings as factual prose; no task rules added",
         "development": "Original seed 20260927 calibration cases only; already observed exploratory data",
         "evaluation_seed": 20260928, "stress_seed": 20260929,
         "cases_per_scenario_per_evaluation_split": args.cases_per_scenario,
