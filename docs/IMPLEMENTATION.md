@@ -44,7 +44,16 @@ accuracy improved from 60% to 67.5% on the fresh test set and to 70% on challeng
 No wrong actions were accepted, but near-threshold/obstacle errors and one
 observation-order inconsistency remain. JSON defaults were retained.
 
-Next: improve numerical/priority interpretation on development data and reserve
+The 2026-10-05 development continuation adds opt-in `robot-rules-v2` with
+explicit numeric equality and action priority instructions. On 32 previously
+inspected development cases, proposals matched all 20 eligible labels; default
+policy accepted 10 correct actions and no wrong actions. This does not establish
+fresh-set performance or boundary/order robustness. JSON remains the default;
+the existing comparison runner blocks reuse of its inspected evaluation seeds
+for v2. The offline suite passes 213 tests. See the representation experiment
+for provenance and the development-only limitations.
+
+Next: test numerical/priority interpretation on development challenges and reserve
 new held-out and recorded-sensor cases for evaluation. The 0.8B model
 was not found in the inspected local stores and was not downloaded, so that
 comparison is pending. Calibration now uses only a separate calibration split;

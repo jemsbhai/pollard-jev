@@ -33,8 +33,9 @@ class OpenJevProvider:
     An injected encoder must implement the upstream ``predict_hypotheses``
     signature. Its caller supplies honest model identity, including whether it
     is synthetic. Action feasibility remains the deterministic policy's job.
-    Input defaults to the original JSON. Experimental ``robot-rules-v1`` adds
-    fixed default-demo task rules; these do not track custom policy settings.
+    Input defaults to the original JSON. Experimental ``robot-rules-v1`` and
+    ``robot-rules-v2`` add fixed default-demo task rules; these do not track
+    custom policy settings.
     """
 
     def __init__(

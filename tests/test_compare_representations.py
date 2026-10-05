@@ -108,6 +108,16 @@ def test_comparison_rejects_same_request_with_different_expected_label(compariso
         comparison.compare(runs)
 
 
+def test_v2_rejects_reusing_inspected_evaluation_before_creating_output(comparison, tmp_path, capsys):
+    output = tmp_path / "must-not-exist"
+    with pytest.raises(SystemExit) as error:
+        comparison.main(["--cache-dir", str(tmp_path), "--output", str(output),
+                         "--stage", "evaluation", "--candidate", "robot-rules-v2"])
+    assert error.value.code == 2
+    assert "fresh reserved seeds" in capsys.readouterr().err
+    assert not output.exists()
+
+
 def test_run_paired_alternates_same_cases_and_separates_warmups(comparison, monkeypatch, tmp_path):
     import pollard_jev.benchmark as benchmark
 

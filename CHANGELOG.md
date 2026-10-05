@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.13 — 2026-10-05
+
+- Add opt-in `robot-rules-v2` input with explicit numeric boundaries, equality
+  examples and action priority; JSON remains the default.
+- Preserve factual readings and audit identity, and reject reuse of the
+  comparison runner's inspected evaluation sets for the new candidate.
+- Record a cached 4B development run: 20/20 eligible proposals match labels,
+  with 10 correct accepted simulated actions and no wrong acceptances at default
+  thresholds. These previously inspected cases do not establish fresh-set,
+  boundary or observation-order robustness; v1 had higher development coverage.
+
 ## 0.12 — 2026-09-27
 
 - Standardize public documentation around the supported local runtime and cache.

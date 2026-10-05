@@ -84,7 +84,7 @@ def main(argv=None):
     parser.add_argument("--cases-per-scenario", type=int, default=4)
     parser.add_argument("--max-length", type=int, default=2048)
     parser.add_argument("--timeout-s", type=float, default=120.0)
-    parser.add_argument("--representation", choices=("json-v1", "text-v1", "robot-rules-v1"), default="json-v1")
+    parser.add_argument("--representation", choices=("json-v1", "text-v1", "robot-rules-v1", "robot-rules-v2"), default="json-v1")
     args = parser.parse_args(argv)
     if not args.cache_dir.is_dir():
         parser.error("--cache-dir must already exist")

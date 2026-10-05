@@ -174,6 +174,51 @@ same templates and the additional challenges do not replace recorded sensor
 data, device testing or energy measurement. The 0.8B comparison and process-level
 inference termination remain separate unfinished roadmap items.
 
+## Numerical and priority development candidate: 2026-10-05
+
+The opt-in `robot-rules-v2` supplies explicit strict/inclusive comparisons,
+equality examples, and a first-matching-rule procedure. Low battery takes
+priority over stuck and obstacles; stuck takes priority over obstacles. It
+adds a fixed statement that observation order does not change rule priority.
+The prefix is identical for every request, and the factual suffix remains
+identical to `text-v1`, including reading order, duplicates and metadata.
+It computes no comparisons, validity checks or preferred action. Like v1,
+it supplies task information and describes only default demonstration rules.
+
+A paired offline run reused the pinned cached 4B model on the original 32
+calibration cases, treated exclusively as previously inspected development
+data. No fresh test cases were used, no confidence thresholds were selected,
+and package defaults remain unchanged.
+
+| Development measure | JSON | Rules v2 |
+| --- | --- | --- |
+| Correct proposals / 20 eligible cases | 12 | 20 |
+| Correct accepted simulated actions, default policy | 7 | 10 |
+| Incorrect accepted actions | 0 | 0 |
+| Required abstentions respected | 12/12 | 12/12 |
+
+V2 corrected eight paired proposals with no proposal regressions. This is
+exploratory development evidence, not generalization evidence. The earlier v1
+development run accepted 12 correct actions, versus v2's 10, so improved raw
+proposal accuracy does not establish improved governed coverage. The state
+machine again matched every label. This run does not specifically evaluate
+near-threshold, simultaneous-priority or matched-order challenges; robustness
+on those strata remains unverified.
+
+The [development snapshot](benchmarks/2026-10-05-rules-v2-development.json)
+preserves metrics, runtime/source and model provenance, and local artifact
+hashes without machine-specific executable paths. Complete records, ledgers
+and input cases remain in the ignored directory
+`artifacts/benchmarks/2026-10-05-rules-v2-development/`.
+
+Reproduce with the existing environment/cache pattern above, a new output
+directory, `--stage development --candidate robot-rules-v2`. The comparison
+runner rejects v2 with `--stage evaluation`: its existing evaluation seeds
+have already been inspected. A subsequent evaluation needs a newly reserved
+corpus and a frozen protocol with independent calibration. The general local
+runner also accepts v2; its default corpus is historical development data
+and must not be presented as fresh evaluation.
+
 The immediate modeling limitation is reliable numerical/priority interpretation,
 not merely JSON formatting. Further input experiments must reserve new test
 cases; these inspected sets are now diagnostic evidence. Process-level worker
